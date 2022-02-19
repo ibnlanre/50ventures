@@ -1,6 +1,6 @@
 import preval from "next-plugin-preval";
 
-async function postsQuery() {
+async function Query() {
   const data = fetch("", {
     method: "POST",
     headers: {
@@ -13,4 +13,4 @@ async function postsQuery() {
     return data;
 }
 
-export default preval(postsQuery());
+export default preval(Query());

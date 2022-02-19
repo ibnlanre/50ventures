@@ -21,3 +21,8 @@ declare module "*.scss" {
   const styles: { [className: string]: string };
   export default styles;
 }
+
+declare module "*.mdx" {
+  let MDXComponent: (props) => JSX.Element;
+  export default MDXComponent;
+}
