@@ -89,6 +89,7 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
   },
   "include": [
+    "next-env.d.ts",
     "./**/*.ts",
     "./**/*.tsx"
   ],
