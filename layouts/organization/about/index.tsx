@@ -4,6 +4,7 @@ import HijabLady from "./assets/hijab-lady.png";
 export function About() {
   return (
     <div
+      id="about"
       className={clsx(
         "grid items-center",
         "grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))]",

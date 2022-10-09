@@ -97,11 +97,12 @@ export function Projects() {
 
   return (
     <Stack
+      id="projects"
       spacing={80}
       className={clsx(
         "max-w-screen-xl mx-auto",
-        "clump:sm:pb-[clamp(4rem,6vw,6rem)] pb-16 sm:pb-24",
-        "clump:sm:px-[clamp(5px,5vw,5rem)] px-4 sm:px-20"
+        "clump:pt-[clamp(4rem,6vw,6rem)] pt-24",
+        "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >
       <Group position="apart">

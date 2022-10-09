@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-
 import OvalOffice from "./assets/oval_office_white_house_briefing.jpg";
 import CorporateCouncil from "./assets/corporate_council_on_africa.jpeg";
 import HandShakeMeeting from "./assets/hand_shake_meeting.jpeg";
@@ -67,15 +64,15 @@ const imagePackTwoLeft = [
     displayWidth: 891,
     displayHeight: 436,
   },
-  {
-    ...PresidentMandela,
-    id: "president_mandela",
-    alt: "President Nelson Mandela, White House Visit",
-    transform:
-      "matrix(-8.72383e-06 -0.00218254 0.00155761 -9.17306e-06 -0.30674 1.66987)",
-    displayWidth: 548,
-    displayHeight: 463,
-  },
+  // {
+  //   ...PresidentMandela,
+  //   id: "president_mandela",
+  //   alt: "President Nelson Mandela, White House Visit",
+  //   transform:
+  //     "matrix(-8.72383e-06 -0.00218254 0.00155761 -9.17306e-06 -0.30674 1.66987)",
+  //   displayWidth: 548,
+  //   displayHeight: 463,
+  // },
 ];
 
 const imagePackThree = [
@@ -105,10 +102,11 @@ const imagePackThree = [
 export function Gallery() {
   return (
     <Stack
+      id="gallery"
       className={clsx(
         "max-w-screen-xl mx-auto",
-        "clump:sm:pb-[clamp(4rem,6vw,6rem)] pb-16 sm:pb-24",
-        "clump:sm:px-[clamp(5px,5vw,5rem)] px-4 sm:px-20"
+        "clump:py-[clamp(4rem,6vw,6rem)] py-24",
+        "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >
       <Group>
@@ -127,7 +125,7 @@ export function Gallery() {
       <Group></Group>
       <div
         style={{
-          columns: "auto 2",
+          columns: "400px 2",
           columnGap: "40px",
           gap: "40px",
         }}

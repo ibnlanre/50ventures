@@ -56,8 +56,8 @@ export function Awards() {
       spacing={80}
       className={clsx(
         "max-w-screen-xl mx-auto",
-        "clump:sm:pb-[clamp(4rem,6vw,6rem)] pb-16 sm:pb-24",
-        "clump:sm:px-[clamp(5px,5vw,5rem)] px-4 sm:px-20"
+        "clump:pt-[clamp(4rem,6vw,6rem)] pt-24",
+        "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >
       <Group position="apart">
@@ -106,23 +106,21 @@ export function Awards() {
       {awards.map((awardPage, idx) => {
         return (
           <Table hidden={idx !== page} key={idx}>
-            <tbody>
-              {awardPage.map(({ date, award, description }, index) => {
-                return (
-                  <tr className="align-top" key={index}>
-                    <td className="px-8 text-3xl font-bold leading-loose text-accent-40 py-11">
-                      {date}
-                    </td>
-                    <td className="px-8 text-2xl font-semibold leading-loose py-11">
-                      {award}
-                    </td>
-                    <td className="px-8 text-2xl font-medium leading-loose text-accent-40 py-11">
-                      {description}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
+            {awardPage.map(({ date, award, description }, index) => {
+              return (
+                <tr className="align-top" key={index}>
+                  <td className="px-8 text-3xl font-bold leading-loose text-accent-40 py-11">
+                    {date}
+                  </td>
+                  <td className="px-8 text-2xl font-semibold leading-loose py-11">
+                    {award}
+                  </td>
+                  <td className="px-8 text-2xl font-medium leading-loose text-accent-40 py-11">
+                    {description}
+                  </td>
+                </tr>
+              );
+            })}
           </Table>
         );
       })}

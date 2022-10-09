@@ -2,6 +2,7 @@ import {
   clsx,
   Divider,
   Group,
+  ScrollArea,
   Spoiler,
   Stack,
   Text,
@@ -13,9 +14,10 @@ import JendayiFrazer from "./assets/jendayi-frazer.png";
 export function Leadership() {
   return (
     <Stack
+      id="leadership"
       className={clsx(
         "max-w-screen-xl mx-auto clump:gap-[clamp(4rem,10vw,20rem)]",
-        "clump:pb-[clamp(4rem,6vw,6rem)] pb-24",
+        "clump:pt-[clamp(4rem,6vw,6rem)] pt-24",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >
@@ -79,89 +81,91 @@ export function Leadership() {
         </Stack>
       </Group>
 
-      <section className="flex gap-24 overflow-scroll">
-        <Stack className="min-w-[250px]" spacing={100}>
-          <Stack>
-            <Title size={26}>Policy</Title>
-            <Text className="text-lg" color="accent.4">
-              She has built movements across the globe by providing expertise in
-              leadership and governance program development, university
-              engagement strategies, and event representation, coordination, and
-              production.
-            </Text>
+      <ScrollArea type="never">
+        <section className="flex gap-24">
+          <Stack className="min-w-[250px]" spacing={100}>
+            <Stack>
+              <Title size={26}>Policy</Title>
+              <Text className="text-lg" color="accent.4">
+                She has built movements across the globe by providing expertise
+                in leadership and governance program development, university
+                engagement strategies, and event representation, coordination,
+                and production.
+              </Text>
+            </Stack>
+
+            <Stack>
+              <Title size={26}>Investment</Title>
+              <Spoiler
+                hideLabel="Hide"
+                showLabel="View More"
+                maxHeight={150}
+                className="text-lg text-accent-40"
+              >
+                She has built movements across the globe by providing expertise
+                in leadership and governance program development, university
+                engagement strategies, and event representation, coordination,
+                and production.
+              </Spoiler>
+            </Stack>
           </Stack>
 
-          <Stack>
-            <Title size={26}>Investment</Title>
-            <Spoiler
-              hideLabel="Hide"
-              showLabel="View More"
-              maxHeight={150}
-              className="text-lg text-accent-40"
-            >
-              She has built movements across the globe by providing expertise in
-              leadership and governance program development, university
-              engagement strategies, and event representation, coordination, and
-              production.
-            </Spoiler>
-          </Stack>
-        </Stack>
-
-        <section className="relative self-center h-max min-w-[360px]">
-          <div
-            style={{
-              backgroundImage:
-                "linear-gradient(180deg, #EEB111 0%, #3B90FB 100%)",
-            }}
-            className="absolute top-0 grid w-full h-full rounded-full"
-          >
+          <section className="relative self-center h-max min-w-[360px]">
             <div
               style={{
-                backgroundImage: `url(${MazePattern.src})`,
+                backgroundImage:
+                  "linear-gradient(180deg, #EEB111 0%, #3B90FB 100%)",
+              }}
+              className="absolute top-0 grid w-full h-full rounded-full"
+            >
+              <div
+                style={{
+                  backgroundImage: `url(${MazePattern.src})`,
+                  backgroundSize: "contain",
+                }}
+                className="p-1 m-1 bg-white rounded-full"
+              ></div>
+            </div>
+            <div
+              style={{
+                backgroundImage: `url(${JendayiFrazer.src})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "bottom",
                 backgroundSize: "contain",
               }}
-              className="p-1 m-1 bg-white rounded-full"
-            ></div>
-          </div>
-          <div
-            style={{
-              backgroundImage: `url(${JendayiFrazer.src})`,
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "bottom",
-              backgroundSize: "contain",
-            }}
-            className="relative p-4 rounded-b-full"
-          >
-            <div className="h-0 pb-[150%]"></div>
-          </div>
-        </section>
-
-        <Stack className="min-w-[250px]" spacing={100}>
-          <Stack>
-            <Title size={26}>Consultancy</Title>
-            <Text className="text-lg" color="accent.4">
-              Her business advisory capabilities have helped clients to optimize
-              performance by providing high-quality strategic advice on business
-              development strategies in emerging markets, risk and security
-              assessments and mitigation.
-            </Text>
-          </Stack>
-
-          <Stack>
-            <Title size={26}>BHW International</Title>
-            <Spoiler
-              hideLabel="Hide"
-              showLabel="View More"
-              maxHeight={150}
-              className="text-lg text-accent-40"
+              className="relative p-4 rounded-b-full"
             >
-              BHW is an integrated real estate holding company that provides
-              secure, affordable and functional homes by building tangible
-              assets that can be passed down to future generation.
-            </Spoiler>
+              <div className="h-0 pb-[150%]"></div>
+            </div>
+          </section>
+
+          <Stack className="min-w-[250px]" spacing={100}>
+            <Stack>
+              <Title size={26}>Consultancy</Title>
+              <Text className="text-lg" color="accent.4">
+                Her business advisory capabilities have helped clients to
+                optimize performance by providing high-quality strategic advice
+                on business development strategies in emerging markets, risk and
+                security assessments and mitigation.
+              </Text>
+            </Stack>
+
+            <Stack>
+              <Title size={26}>BHW International</Title>
+              <Spoiler
+                hideLabel="Hide"
+                showLabel="View More"
+                maxHeight={150}
+                className="text-lg text-accent-40"
+              >
+                BHW is an integrated real estate holding company that provides
+                secure, affordable and functional homes by building tangible
+                assets that can be passed down to future generation.
+              </Spoiler>
+            </Stack>
           </Stack>
-        </Stack>
-      </section>
+        </section>
+      </ScrollArea>
 
       <Stack className="max-w-4xl mx-auto" align="center">
         <Group spacing="xl" position="center" className="max-w-4xl">

@@ -4,6 +4,7 @@ import WomanWithGlasses from "./assets/woman-with-glasses.jpeg";
 export function MissionStatement() {
   return (
     <div
+      id="mission-statement"
       className={clsx(
         "grid items-center",
         "grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))]",

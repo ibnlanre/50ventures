@@ -1,5 +1,5 @@
 import { Logo } from "@/svg";
-import { Button, Group } from "@mantine/core";
+import { Button, clsx, Group } from "@mantine/core";
 import { useHash } from "@mantine/hooks";
 import { useEffect } from "react";
 
@@ -41,7 +41,12 @@ export function NavBar() {
   return (
     <Group
       py="lg"
-      className="max-w-screen-xl px-5 mx-auto sm:px-20"
+      className="sticky top-0 z-10 max-w-screen-xl px-5 mx-auto sm:px-20"
+      style={{
+        background:
+          "linear-gradient(116.82deg, rgba(253, 250, 244, 0.07) 0%, rgba(240, 245, 251, 0.02) 100%)",
+        backdropFilter: "blur(10px)",
+      }}
       position="apart"
     >
       <Logo />
@@ -50,7 +55,12 @@ export function NavBar() {
           {navItems.map(({ title, id }, idx) => (
             <Link key={idx} href={"#" + id} passHref>
               <Button
-                className={hash.match(id) ? "text-accent-70" : "text-accent-50"}
+                className={clsx(
+                  "bg-transparent",
+                  hash.match(id)
+                    ? "text-accent-70"
+                    : "text-accent-50"
+                )}
                 variant="white"
                 component="a"
               >

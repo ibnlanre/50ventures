@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     colors: {
       black: "#000",
+      transparent: "transparent",
       white: "#FFF",
       accent: {
         10: "#5C98DE",

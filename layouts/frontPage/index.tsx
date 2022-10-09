@@ -52,6 +52,7 @@ const images: Array<{
 export function FrontPage() {
   return (
     <Stack
+      id="home"
       className={clsx(
         "max-w-screen-xl mx-auto gap-20",
         "clump:sm:pt-[clamp(4rem,6vw,6rem)] pt-16 sm:pt-24",
