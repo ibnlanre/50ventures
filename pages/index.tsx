@@ -1,4 +1,27 @@
+import {
+  Awards,
+  Footer,
+  FrontPage,
+  Gallery,
+  Leadership,
+  NavBar,
+  Organization,
+  Projects,
+} from "@/layouts";
 
+function Home() {
+  return (
+    <>
+      <NavBar />
+      <FrontPage />
+      <Organization />
+      <Leadership />
+      <Projects />
+      <Awards />
+      <Gallery />
+      <Footer />
+    </>
+  );
+}
 
-import DarkModeButton from "@/components/darkModeButton";
-export default DarkModeButton;
+export default Home;

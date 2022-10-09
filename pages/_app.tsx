@@ -1,10 +1,11 @@
 import "@/css/index.css";
+
 import aos from "aos";
 import Head from "next/head";
-import { MantineProvider } from "@mantine/styles";
 
-import { useEffect } from "react";
+import { MantineProvider } from "@mantine/styles";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 function App({ Component, pageProps }) {
   const router = useRouter();
@@ -33,23 +34,23 @@ function App({ Component, pageProps }) {
       theme={{
         colors: {
           accent: [
-            "#F9E3E3",
-            "#F1C8C7",
-            "#EAAEAD",
-            "#E59695",
-            "#E0817E",
-            "#DE6D69",
-            "#DD5A56",
-            "#DE4942",
-            "#E1261C",
+            "#5C98DE",
+            "#EFF5FC",
+            "#EEB111",
+            "#6A7283",
+            "#8487A3",
+            "#EDEDED",
+            "#002D62",
+            "#3B90FB",
+            "#17142F",
             "#C81107",
           ],
         },
         primaryColor: "accent",
         colorScheme: "light",
-        fontFamily: "Muli, sans-serif",
+        fontFamily: "Montserrat, sans-serif",
         fontFamilyMonospace: "Monaco, Courier, monospace",
-        headings: { fontFamily: "Muli, sans-serif" },
+        headings: { fontFamily: "Montserrat, sans-serif" },
       }}
     >
       <Head>
