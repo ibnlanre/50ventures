@@ -41,7 +41,7 @@ export function Organization() {
         <Tabs.List>
           <Tabs.Tab value="about">About</Tabs.Tab>
           <Tabs.Tab value="mission_statement">Mission Statement</Tabs.Tab>
-          <Tabs.Tab value="team">Team</Tabs.Tab>
+          {/* <Tabs.Tab value="team">Team</Tabs.Tab> */}
         </Tabs.List>
 
         <Tabs.Panel value="about">
@@ -52,9 +52,9 @@ export function Organization() {
           <MissionStatement />
         </Tabs.Panel>
 
-        <Tabs.Panel value="team">
+        {/* <Tabs.Panel value="team">
           <Team />
-        </Tabs.Panel>
+        </Tabs.Panel> */}
       </Tabs>
     </div>
   );

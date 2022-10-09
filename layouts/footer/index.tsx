@@ -93,7 +93,7 @@ export function Footer() {
               <li>info@50ventures.com</li>
             </ul>
           </Stack>
-          <Group>
+          <Group hidden>
             <Link href="" passHref>
               <a>
                 <Facebook />
@@ -146,7 +146,7 @@ export function Footer() {
       <Group
         className={clsx(
           "max-w-screen-xl mx-auto w-full justify-between",
-          "clump:py-[clamp(1rem,2vw,2.25rem)] py-9",
+          "clump:py-[clamp(1rem,2vw,2rem)] py-8",
           "clump:px-[clamp(5px,5vw,5rem)] px-20"
         )}
       >

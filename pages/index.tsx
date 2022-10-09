@@ -16,7 +16,7 @@ function Home() {
       <FrontPage />
       <Organization />
       <Leadership />
-      <Projects />
+      {/* <Projects /> */}
       <Awards />
       <Gallery />
       <Footer />
