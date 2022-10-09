@@ -46,7 +46,7 @@ export function MissionStatement() {
           }}
           className="leading-[40px] text-lg"
           maxHeight={320}
-          hideLabel={false}
+          hideLabel="Hide"
           showLabel="View More"
         >
           50 Ventures creates strategic pathways to success for our clients by

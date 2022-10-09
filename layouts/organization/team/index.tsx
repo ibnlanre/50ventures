@@ -21,7 +21,7 @@ export function Team() {
           }}
           className="leading-[40px] text-lg"
           maxHeight={320}
-          hideLabel={false}
+          hideLabel="Hide"
           showLabel="View More"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus in

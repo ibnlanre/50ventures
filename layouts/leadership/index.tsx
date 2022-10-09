@@ -17,7 +17,7 @@ export function Leadership() {
       id="leadership"
       className={clsx(
         "max-w-screen-xl mx-auto clump:gap-[clamp(4rem,10vw,20rem)]",
-        "clump:pt-[clamp(4rem,6vw,6rem)] pt-24",
+        "clump:py-[clamp(4rem,6vw,6rem)] pt-24",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >
