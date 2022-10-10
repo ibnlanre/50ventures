@@ -49,7 +49,7 @@ export function Awards() {
       className={clsx(
         "max-w-screen-xl mx-auto overflow-hidden",
         "clump:gap-[clamp(2.5rem,5vw,5rem)] gap-20",
-        "clump:pt-[clamp(4rem,9vw,9rem)] pt-36",
+        "clump:pt-[clamp(5rem,9vw,9rem)] pt-36",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >

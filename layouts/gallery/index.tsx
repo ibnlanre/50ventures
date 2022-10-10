@@ -84,7 +84,7 @@ export function Gallery() {
       className={clsx(
         "max-w-screen-xl mx-auto",
         "clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10",
-        "clump:py-[clamp(4rem,9vw,9rem)] py-36",
+        "clump:py-[clamp(5rem,9vw,9rem)] py-36",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >

@@ -18,6 +18,7 @@ module.exports = withNextPluginPreval({
     });
     return config;
   },
+  optimizeFonts: false,
   staticPageGenerationTimeout: 300,
   env: {
     LIVE_TICKER_URL: process.env.LIVE_TICKER_URL,

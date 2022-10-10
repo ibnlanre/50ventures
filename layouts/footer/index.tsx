@@ -1,4 +1,4 @@
-import { LogoCurrentColor } from "@/svg/logoCurrentColor";
+import { LogoCurrentColor } from "@/components";
 import { clsx, Divider, Group, Stack, Text, Title } from "@mantine/core";
 import Link from "next/link";
 

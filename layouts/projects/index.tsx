@@ -101,7 +101,7 @@ export function Projects() {
       spacing={80}
       className={clsx(
         "max-w-screen-xl mx-auto",
-        "clump:pt-[clamp(4rem,9vw,9rem)] pt-36",
+        "clump:pt-[clamp(5rem,9vw,9rem)] pt-36",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >

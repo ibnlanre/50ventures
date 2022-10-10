@@ -1,4 +1,4 @@
-import { Logo } from "@/svg";
+import { Logo } from "@/components";
 import { Button, clsx, Group } from "@mantine/core";
 import { useHash } from "@mantine/hooks";
 import { useEffect } from "react";
