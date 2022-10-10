@@ -73,6 +73,10 @@ const imagePack = [
   },
 ];
 
+function Summary() {
+  return <></>
+}
+
 export function Gallery() {
   return (
     <Stack
@@ -105,7 +109,7 @@ export function Gallery() {
 
         <div
           className={clsx(
-            "group relative",
+            "group relative rounded-3xl overflow-hidden",
             css({
               filter: "grayscale(1)",
               "&:hover": {
@@ -132,7 +136,12 @@ export function Gallery() {
             }}
             className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
           >
-            <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+            <Text
+              className={clsx(
+                "clump:leading-[clamp(1.3rem,2vw,2.5rem)] clump:text-[clamp(14px,1.25vw,20px)]",
+                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
+              )}
+            >
               Dr. Jendayi E. Frazer, and President George W. Bush, Former U.S
               Secretary of State Colin Powell, Vice President Richard Bruce
               Cheney, and US Trade Representative Robert B. Zoellick, Oval
@@ -152,7 +161,7 @@ export function Gallery() {
         <Stack className="clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10 h-full lg:max-w-[35vw] xl:max-w-[25vw]">
           <div
             className={clsx(
-              "group relative",
+              "group relative rounded-3xl overflow-hidden",
               css({
                 filter: "grayscale(1)",
                 "&:hover": {
@@ -179,7 +188,10 @@ export function Gallery() {
               }}
               className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
             >
-              <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+              <Text className={clsx(
+                "clump:leading-[clamp(1.3rem,2vw,2.5rem)] clump:text-[clamp(14px,1.25vw,20px)]",
+                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
+              )}>
                 Dr. Jendayi E. Frazer, and President Samia Suhulu Hassan of
                 Tanzania in DC 2022.
               </Text>
@@ -187,7 +199,7 @@ export function Gallery() {
           </div>
           <div
             className={clsx(
-              "flex-1 h-full group relative",
+              "flex-1 h-full group relative rounded-3xl overflow-hidden",
               css({
                 filter: "grayscale(1)",
                 "&:hover": {
@@ -214,7 +226,10 @@ export function Gallery() {
               }}
               className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
             >
-              <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+              <Text className={clsx(
+                "clump:leading-[clamp(1.3rem,2vw,2.5rem)] clump:text-[clamp(14px,1.25vw,20px)]",
+                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
+              )}>
                 Dr. Jendayi E. Frazer, and President George W. Bush, at the Oval
                 Office, White House.
               </Text>
@@ -225,7 +240,7 @@ export function Gallery() {
         <Stack className="h-full clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10">
           <div
             className={clsx(
-              "flex-1 h-full group relative",
+              "flex-1 h-full group relative rounded-3xl overflow-hidden",
               css({
                 filter: "grayscale(1)",
                 "&:hover": {
@@ -252,7 +267,10 @@ export function Gallery() {
               }}
               className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
             >
-              <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+              <Text className={clsx(
+                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
+              )}>
                 Dr. Jendayi E. Frazer, and President Paul Kagame of Rwanda at
                 the Munich Security Conference (March, 2022)
               </Text>
@@ -260,7 +278,7 @@ export function Gallery() {
           </div>
           <div
             className={clsx(
-              "h-full group relative",
+              "h-full group relative rounded-3xl overflow-hidden",
               css({
                 filter: "grayscale(1)",
                 "&:hover": {
@@ -287,7 +305,10 @@ export function Gallery() {
               }}
               className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
             >
-              <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+              <Text className={clsx(
+                "clump:leading-[clamp(1.3rem,2vw,2.5rem)] clump:text-[clamp(14px,1.25vw,20px)]",
+                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
+              )}>
                 Dr. Jendayi E. Frazer, with President Salva Kiir Mayardit of
                 Sudan at State House, Juba, South Sudan .
               </Text>
@@ -305,7 +326,7 @@ export function Gallery() {
       >
         <div
           className={clsx(
-            "h-full group relative",
+            "h-full group relative rounded-3xl overflow-hidden",
             css({
               filter: "grayscale(1)",
               "&:hover": {
@@ -332,7 +353,10 @@ export function Gallery() {
             }}
             className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
           >
-            <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+            <Text className={clsx(
+                "clump:leading-[clamp(1.3rem,2vw,2.5rem)] clump:text-[clamp(14px,1.25vw,20px)]",
+                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
+              )}>
               Dr. Jendayi E. Frazer, and President Ellen Johnson-Sirleaf of
               Liberia meeting in Monrovia.
             </Text>
@@ -341,7 +365,7 @@ export function Gallery() {
 
         <div
           className={clsx(
-            "lg:max-w-[35vw] h-full group relative",
+            "lg:max-w-[35vw] h-full group relative rounded-3xl overflow-hidden",
             css({
               filter: "grayscale(1)",
               "&:hover": {
@@ -368,7 +392,10 @@ export function Gallery() {
             }}
             className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
           >
-            <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+            <Text className={clsx(
+                "clump:leading-[clamp(1.3rem,2vw,2.5rem)] clump:text-[clamp(14px,1.25vw,20px)]",
+                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
+              )}>
               Dr. Jendayi E. Frazer, and Nelson Mandela of South Africa in DC.
             </Text>
           </div>
