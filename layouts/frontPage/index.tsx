@@ -70,7 +70,7 @@ export function FrontPage() {
       id="home"
       className={clsx(
         "max-w-screen-xl mx-auto",
-        "clump:pt-[clamp(6rem,12vw,12rem)] pt-48",
+        "clump:pt-[clamp(7rem,12vw,12rem)] pt-48",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >
@@ -86,7 +86,7 @@ export function FrontPage() {
           align="flex-start"
         >
           <Text
-            className="rounded-[35px] py-3 bg-accent-10 bg-opacity-10"
+            className="rounded-[35px] py-3 bg-accent-10 bg-opacity-10 clump:text-[clamp(12px,1vw,1rem)] text-base"
             px="lg"
           >
             🏆 Award Winning Investment Consultant
@@ -105,7 +105,7 @@ export function FrontPage() {
             business investments, providing innovative ideas on governance,
             stability and security, enterprise, and risk management.
           </Text>
-          
+
           <Link href="/contact-us" passHref>
             <Button id="partners" component="a" className="text-white stripe">
               Contact Us
