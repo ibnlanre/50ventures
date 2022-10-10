@@ -4,14 +4,13 @@ import HijabLady from "./assets/hijab-lady.png";
 export function About() {
   return (
     <div
-      id="about"
       className={clsx(
         "grid items-center",
         "grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))]",
         "clump:sm:gap-[clamp(1rem,7vw,7rem)] gap-8 sm:gap-28"
       )}
     >
-      <section className="relative">
+      <section data-aos="fade-up" className="relative">
         <div
           style={{
             backgroundImage:
@@ -40,17 +39,16 @@ export function About() {
           ABOUT
         </Title>
         <Spoiler
-          classNames={{
-            control: "underline text-accent-40",
-            root: "text-accent-40",
-          }}
-          className="leading-[40px] text-lg"
           maxHeight={320}
           hideLabel="Hide"
           showLabel="View More"
+          classNames={{
+            root: "leading-[40px] text-accent-40 text-lg",
+            content: "duration-500"
+          }}
         >
           <Stack>
-            <Text>
+            <Text className="leading-[40px] text-lg">
               50 ventures is a market-leading, global, investment consultancy
               and strategic advisory company focused on high-growth African
               markets by providing strategic expertise on international affairs
@@ -63,7 +61,7 @@ export function About() {
               objectives and succeed on the continent.
             </Text>
 
-            <Text>
+            <Text className="leading-[40px] text-lg">
               Through its services and investments focusing on economic
               inclusiveness, entrepreneurship, and social responsibility, 50
               Ventures seeks to elevate the status of Africa in the world and

@@ -31,7 +31,7 @@ export function Team() {
           vel. Interdum egestas enim dignissim ultrices cursus sem amet sit.
           Suspendisse volutpat sit et aenean auctor. Imperdiet.
         </Spoiler>
-        <section className="relative">
+        <section data-aos="fade-up" className="relative">
           <div
             style={{
               backgroundImage:

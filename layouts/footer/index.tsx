@@ -76,11 +76,11 @@ function LinkedIn() {
 
 export function Footer() {
   return (
-    <Stack id="footer" className="text-white bg-accent-70 ">
+    <Stack spacing={0} id="footer" className="text-white bg-accent-70 ">
       <Group
         className={clsx(
           "max-w-screen-xl mx-auto w-full justify-between",
-          "clump:py-[clamp(1rem,4vw,4rem)] py-16",
+          "clump:py-[clamp(3rem,4vw,4rem)] py-16",
           "clump:px-[clamp(5px,5vw,5rem)] px-20"
         )}
       >
@@ -93,25 +93,10 @@ export function Footer() {
               <li>info@50ventures.com</li>
             </ul>
           </Stack>
-          <Group hidden>
-            <Link href="" passHref>
-              <a>
-                <Facebook />
-              </a>
-            </Link>
-            <Link href="" passHref>
-              <a>
-                <Instagram />
-              </a>
-            </Link>
-            <Link href="" passHref>
-              <a>
+          <Group>
+            <Link href="https://www.twitter.com/50ventures" passHref>
+              <a target="_blank">
                 <Twitter />
-              </a>
-            </Link>
-            <Link href="" passHref>
-              <a>
-                <LinkedIn />
               </a>
             </Link>
           </Group>
@@ -150,8 +135,10 @@ export function Footer() {
           "clump:px-[clamp(5px,5vw,5rem)] px-20"
         )}
       >
-        <Text>&copy; 50Ventures 2022, All right reserved.</Text>
-        <Group position="apart">
+        <Text>
+          &copy; 50Ventures {new Date().getFullYear()}, All right reserved.
+        </Text>
+        <Group ml="auto" position="apart">
           <Text>Privacy Policy</Text>
           <Text>Terms of Service</Text>
         </Group>

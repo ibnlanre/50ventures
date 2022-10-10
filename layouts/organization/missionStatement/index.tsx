@@ -11,7 +11,7 @@ export function MissionStatement() {
         "clump:sm:gap-[clamp(1rem,7vw,7rem)] gap-8 sm:gap-28"
       )}
     >
-      <section className="relative">
+      <section data-aos="fade-up" className="relative">
         <div
           style={{
             backgroundImage:
@@ -40,14 +40,13 @@ export function MissionStatement() {
           MISSION STATMENT
         </Title>
         <Spoiler
-          classNames={{
-            control: "underline text-accent-40",
-            root: "text-accent-40",
-          }}
-          className="leading-[40px] text-lg"
           maxHeight={320}
           hideLabel="Hide"
           showLabel="View More"
+          classNames={{
+            root: "leading-[40px] text-accent-40 text-lg",
+            content: "duration-500",
+          }}
         >
           50 Ventures creates strategic pathways to success for our clients by
           cultivating opportunities to invest and engage across economic and

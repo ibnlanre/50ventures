@@ -1,4 +1,5 @@
 import "@/css/index.css";
+import "aos/dist/aos.css";
 
 import aos from "aos";
 import Head from "next/head";

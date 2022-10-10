@@ -1,5 +1,5 @@
 import { Button, clsx, Group, Stack, Text, Title } from "@mantine/core";
-
+import lqip from "lqip-modern";
 import Marquee from "react-fast-marquee";
 
 import Abbott from "./assets/abbott.png";
@@ -10,6 +10,7 @@ import ConservationIntl from "./assets/conservation-intl.png";
 import Disney from "./assets/disney.png";
 import IBM from "./assets/ibm.png";
 import MoIbrahim from "./assets/mo-ibrahim.png";
+import { useEffect, useState } from "react";
 
 const images: Array<{
   src: string;
@@ -50,28 +51,50 @@ const images: Array<{
 ];
 
 export function FrontPage() {
+  const [skyscraper, setSkysraper] = useState<
+    Partial<{
+      content: ArrayBuffer;
+      metadata: {
+        originalWidth: number;
+        originalHeight: number;
+        width: number;
+        height: number;
+        type: string;
+        dataURIBase64: string;
+      };
+    }>
+  >({});
+
   return (
     <Stack
       id="home"
       className={clsx(
-        "max-w-screen-xl mx-auto gap-20",
-        "clump:sm:pt-[clamp(4rem,6vw,6rem)] pt-16 sm:pt-24",
-        "clump:sm:px-[clamp(5px,5vw,5rem)] px-4 sm:px-20"
+        "max-w-screen-xl mx-auto",
+        "clump:pt-[clamp(6rem,9vw,9rem)] pt-36",
+        "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >
       <div
         className={clsx(
           "grid items-center",
           "grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))]",
-          "clump:sm:gap-[clamp(1rem,7vw,7rem)] gap-8 sm:gap-28"
+          "clump:gap-[clamp(1rem,7vw,7rem)] gap-28"
         )}
       >
-        <Stack spacing={50} align="flex-start">
-          <Text className="rounded-md bg-[#FDFEFF]" py="sm" px="lg">
+        <Stack
+          className="clump:gap-[clamp(1rem,3vw,3rem)] gap-12"
+          align="flex-start"
+        >
+          <Text className="rounded-[35px] py-3 bg-accent-10 bg-opacity-10" px="lg">
             🏆 Award Winning Investment Consultant
           </Text>
-          <Title className="text-5xl font-bold font-clash leading-[72px]" order={1}>Unveiling Strategic Pathways to Success</Title>
-          
+          <Title
+            className="text-5xl font-bold font-clash leading-[72px]"
+            order={1}
+          >
+            Unveiling Strategic Pathways to Success
+          </Title>
+
           <Text className="text-lg text-accent-40 leading-[36px]">
             A market-leading, global, investment consultancy and strategic
             advisory company focused on high-growth African markets with
@@ -79,10 +102,10 @@ export function FrontPage() {
             business investments, providing innovative ideas on governance,
             stability and security, enterprise, and risk management.
           </Text>
-          <Button className="stripe">Contact Us</Button>
+          <Button id="partners" className="stripe">Contact Us</Button>
         </Stack>
 
-        <section className="relative">
+        <section className="relative hidden sm:block">
           <div
             style={{
               backgroundImage:
@@ -96,7 +119,10 @@ export function FrontPage() {
                 writingMode: "vertical-rl",
                 textOrientation: "mixed",
               }}
-              className="absolute text-[#6A72832E] text-[200%] font-bold bottom-0 right-0 m-0 -mr-6 bg-white pt-2 pb-[5%] uppercase"
+              className={clsx(
+                "font-bold bottom-0 right-0 m-0 -mr-1 lg:-mr-2 bg-white pt-2 pb-[5%] uppercase leading-3",
+                "absolute text-[#6A72832E] clump:text-[clamp(150%,3vw,3rem)] text-5xl"
+              )}
             >
               credibilty
             </p>
@@ -116,7 +142,10 @@ export function FrontPage() {
         </section>
       </div>
 
-      <Group className="flex-col md:flex-row">
+      <Group
+        align="start"
+        className="flex-col pt-16 clump:pt-[clamp(1rem,4vw,4rem)] sm:flex-row"
+      >
         <Text className="max-w-[18rem]">
           Trusted by more than 50+ companies worldwide:
         </Text>

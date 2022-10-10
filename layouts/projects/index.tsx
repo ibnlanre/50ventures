@@ -101,7 +101,7 @@ export function Projects() {
       spacing={80}
       className={clsx(
         "max-w-screen-xl mx-auto",
-        "clump:py-[clamp(4rem,6vw,6rem)] pt-24",
+        "clump:pt-[clamp(4rem,9vw,9rem)] pt-36",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >
@@ -181,9 +181,7 @@ export function Projects() {
                 <Title className="text-2xl font-semibold" order={4}>
                   Project Brief:
                 </Title>
-                <ul
-                  className="my-0 list-[&#8212;]"
-                >
+                <ul className="my-0 list-[&#8212;]">
                   {brief.map((item, index) => (
                     <li className="leading-[40px] text-lg" key={index}>
                       {item}
