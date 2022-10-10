@@ -1,15 +1,16 @@
-import OvalOffice from "./assets/oval_office_white_house_briefing.jpg";
+import OvalOffice from "./assets/oval_office_white_house_briefing.png";
 import CorporateCouncil from "./assets/corporate_council_on_africa.jpeg";
 import HandShakeMeeting from "./assets/hand_shake_meeting.jpeg";
-import PresidentBush from "./assets/president_bush.jpeg";
+import PresidentBush from "./assets/president_bush.png";
 import SouthSudanPresident from "./assets/south_sudan_president.jpg";
 import SittingWithMadam from "./assets/sitted_with_madam.jpeg";
 import PresidentMandela from "./assets/president_mandela.png";
 import CarnegieMellon from "./assets/carnegie_mellon_university.jpg";
-import { clsx, Group, Stack, Text, Title } from "@mantine/core";
-import { Frame } from "./frame";
 
-const imagePackOne = [
+import { clsx, Stack, Text, Title } from "@mantine/core";
+import { css } from "@emotion/css";
+
+const imagePack = [
   {
     ...OvalOffice,
     id: "oval_office",
@@ -19,9 +20,6 @@ const imagePackOne = [
     displayWidth: 891,
     displayHeight: 463,
   },
-];
-
-const imagePackTwoLeft = [
   {
     ...CorporateCouncil,
     id: "corporate_council",
@@ -64,26 +62,6 @@ const imagePackTwoLeft = [
     displayWidth: 891,
     displayHeight: 436,
   },
-  // {
-  //   ...PresidentMandela,
-  //   id: "president_mandela",
-  //   alt: "President Nelson Mandela, White House Visit",
-  //   transform:
-  //     "matrix(-8.72383e-06 -0.00218254 0.00155761 -9.17306e-06 -0.30674 1.66987)",
-  //   displayWidth: 548,
-  //   displayHeight: 463,
-  // },
-];
-
-const imagePackThree = [
-  {
-    ...SittingWithMadam,
-    id: "sitting_with_madam",
-    alt: "Sitting with Madam",
-    transform: "translate(0 -0.123213) scale(0.00165563 0.00304428)",
-    displayWidth: 891,
-    displayHeight: 436,
-  },
   {
     ...PresidentMandela,
     id: "president_mandela",
@@ -93,10 +71,6 @@ const imagePackThree = [
     displayWidth: 548,
     displayHeight: 463,
   },
-
-  // {
-  //   alt: "Commencement Speaker at Carnegie Mellon University-Africa in Kigali, Rwanda",
-  // },
 ];
 
 export function Gallery() {
@@ -105,12 +79,18 @@ export function Gallery() {
       id="gallery"
       className={clsx(
         "max-w-screen-xl mx-auto",
-        "clump:pt-[clamp(4rem,9vw,9rem)] pt-36",
+        "clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10",
+        "clump:py-[clamp(4rem,9vw,9rem)] py-36",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >
-      <Group>
-        <Stack className="gap-12">
+      <section
+        className={clsx(
+          "grid items-center auto-cols-[auto_1fr] lg:grid-flow-col",
+          "clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10"
+        )}
+      >
+        <Stack className="gap-12 lg:max-w-[35vw] xl:max-w-[25vw]">
           <Title className="text-3xl font-clash" order={2} weight={700}>
             GALLERY
           </Title>
@@ -122,20 +102,278 @@ export function Gallery() {
             set your business and projects apart.
           </Text>
         </Stack>
-      </Group>
 
-      <Group></Group>
-      <div
-        style={{
-          columns: "400px 2",
-          columnGap: "40px",
-          gap: "40px",
-        }}
+        <div
+          className={clsx(
+            "group relative",
+            css({
+              filter: "grayscale(1)",
+              "&:hover": {
+                filter: "none",
+              },
+            })
+          )}
+        >
+          <img
+            className="rounded-3xl"
+            src={OvalOffice.src}
+            width="100%"
+            height="100%"
+            alt="bhw logo"
+            style={{
+              objectFit: "cover",
+              objectPosition: "0 5%",
+            }}
+          />
+          <div
+            style={{
+              backgroundImage:
+                "linear-gradient(173.35deg, rgba(0, 0, 0, 0.13) 30.14%, rgba(0, 0, 0, 0.6) 48.45%, rgba(0, 0, 0, 0.86) 66.65%)",
+            }}
+            className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
+          >
+            <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+              Dr. Jendayi E. Frazer, and President George W. Bush, Former U.S
+              Secretary of State Colin Powell, Vice President Richard Bruce
+              Cheney, and US Trade Representative Robert B. Zoellick, Oval
+              Office, White House Briefing.
+            </Text>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className={clsx(
+          "lg:grid-cols-none lg:auto-cols-[auto_1fr] md:grid-flow-col",
+          "clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10",
+          "grid items-center sm:grid-cols-2"
+        )}
       >
-        {imagePackTwoLeft.map((props, index) => (
-          <Frame {...props} />
-        ))}
-      </div>
+        <Stack className="clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10 h-full lg:max-w-[35vw] xl:max-w-[25vw]">
+          <div
+            className={clsx(
+              "group relative",
+              css({
+                filter: "grayscale(1)",
+                "&:hover": {
+                  filter: "none",
+                },
+              })
+            )}
+          >
+            <img
+              className="rounded-3xl"
+              src={CorporateCouncil.src}
+              width="100%"
+              height="100%"
+              alt="bhw logo"
+              style={{
+                objectFit: "cover",
+                objectPosition: "0 5%",
+              }}
+            />
+            <div
+              style={{
+                backgroundImage:
+                  "linear-gradient(173.35deg, rgba(0, 0, 0, 0.13) 30.14%, rgba(0, 0, 0, 0.6) 48.45%, rgba(0, 0, 0, 0.86) 66.65%)",
+              }}
+              className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
+            >
+              <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+                Dr. Jendayi E. Frazer, and President Samia Suhulu Hassan of
+                Tanzania in DC 2022.
+              </Text>
+            </div>
+          </div>
+          <div
+            className={clsx(
+              "flex-1 h-full group relative",
+              css({
+                filter: "grayscale(1)",
+                "&:hover": {
+                  filter: "none",
+                },
+              })
+            )}
+          >
+            <img
+              className="rounded-3xl"
+              src={PresidentBush.src}
+              width="100%"
+              height="100%"
+              alt="bhw logo"
+              style={{
+                objectFit: "cover",
+                objectPosition: "center top",
+              }}
+            />
+            <div
+              style={{
+                backgroundImage:
+                  "linear-gradient(173.35deg, rgba(0, 0, 0, 0.13) 30.14%, rgba(0, 0, 0, 0.6) 48.45%, rgba(0, 0, 0, 0.86) 66.65%)",
+              }}
+              className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
+            >
+              <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+                Dr. Jendayi E. Frazer, and President George W. Bush, at the Oval
+                Office, White House.
+              </Text>
+            </div>
+          </div>
+        </Stack>
+
+        <Stack className="h-full clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10">
+          <div
+            className={clsx(
+              "flex-1 h-full group relative",
+              css({
+                filter: "grayscale(1)",
+                "&:hover": {
+                  filter: "none",
+                },
+              })
+            )}
+          >
+            <img
+              className="rounded-3xl"
+              src={HandShakeMeeting.src}
+              width="100%"
+              height="100%"
+              alt="bhw logo"
+              style={{
+                objectFit: "cover",
+                objectPosition: "0 5%",
+              }}
+            />
+            <div
+              style={{
+                backgroundImage:
+                  "linear-gradient(173.35deg, rgba(0, 0, 0, 0.13) 30.14%, rgba(0, 0, 0, 0.6) 48.45%, rgba(0, 0, 0, 0.86) 66.65%)",
+              }}
+              className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
+            >
+              <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+                Dr. Jendayi E. Frazer, and President Paul Kagame of Rwanda at
+                the Munich Security Conference (March, 2022)
+              </Text>
+            </div>
+          </div>
+          <div
+            className={clsx(
+              "h-full group relative",
+              css({
+                filter: "grayscale(1)",
+                "&:hover": {
+                  filter: "none",
+                },
+              })
+            )}
+          >
+            <img
+              className="rounded-3xl"
+              src={SouthSudanPresident.src}
+              width="100%"
+              height="100%"
+              alt="bhw logo"
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+            <div
+              style={{
+                backgroundImage:
+                  "linear-gradient(173.35deg, rgba(0, 0, 0, 0.13) 30.14%, rgba(0, 0, 0, 0.6) 48.45%, rgba(0, 0, 0, 0.86) 66.65%)",
+              }}
+              className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
+            >
+              <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+                Dr. Jendayi E. Frazer, with President Salva Kiir Mayardit of
+                Sudan at State House, Juba, South Sudan .
+              </Text>
+            </div>
+          </div>
+        </Stack>
+      </section>
+
+      <section
+        className={clsx(
+          "lg:grid-cols-none lg:auto-cols-[auto_1fr] md:grid-flow-col",
+          "clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10",
+          "grid items-center sm:grid-cols-2"
+        )}
+      >
+        <div
+          className={clsx(
+            "h-full group relative",
+            css({
+              filter: "grayscale(1)",
+              "&:hover": {
+                filter: "none",
+              },
+            })
+          )}
+        >
+          <img
+            className="rounded-3xl"
+            src={SittingWithMadam.src}
+            width="100%"
+            height="100%"
+            alt="bhw logo"
+            style={{
+              objectFit: "cover",
+              objectPosition: "left top",
+            }}
+          />
+          <div
+            style={{
+              backgroundImage:
+                "linear-gradient(173.35deg, rgba(0, 0, 0, 0.13) 30.14%, rgba(0, 0, 0, 0.6) 48.45%, rgba(0, 0, 0, 0.86) 66.65%)",
+            }}
+            className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
+          >
+            <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+              Dr. Jendayi E. Frazer, and President Ellen Johnson-Sirleaf of
+              Liberia meeting in Monrovia.
+            </Text>
+          </div>
+        </div>
+
+        <div
+          className={clsx(
+            "lg:max-w-[35vw] h-full group relative",
+            css({
+              filter: "grayscale(1)",
+              "&:hover": {
+                filter: "none",
+              },
+            })
+          )}
+        >
+          <img
+            width="100%"
+            height="100%"
+            alt="bhw logo"
+            src={PresidentMandela.src}
+            className="rounded-3xl"
+            style={{
+              objectFit: "cover",
+              objectPosition: "center top",
+            }}
+          />
+          <div
+            style={{
+              backgroundImage:
+                "linear-gradient(173.35deg, rgba(0, 0, 0, 0.13) 30.14%, rgba(0, 0, 0, 0.6) 48.45%, rgba(0, 0, 0, 0.86) 66.65%)",
+            }}
+            className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
+          >
+            <Text className="text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-5">
+              Dr. Jendayi E. Frazer, and Nelson Mandela of South Africa in DC.
+            </Text>
+          </div>
+        </div>
+      </section>
     </Stack>
   );
 }

@@ -34,7 +34,7 @@ export function Leadership() {
           most promising growth markets.
         </Text>
         <Divider className="hidden sm:block" orientation="vertical" />
-        <Stack className="overflow-clip">
+        <Stack data-aos="zoom-in" className="overflow-clip">
           <div className="relative">
             <p
               style={{
@@ -87,9 +87,15 @@ export function Leadership() {
         </Stack>
       </Group>
 
-      <section className="grid gap-y-8 gap-x-24 lg:gap-12 xl:gap-24 grid-cols-[repeat(auto-fit,minmax(min(250px,100%),1fr))]">
-        <Stack className="gap-x-24 gap-y-8">
-          <Stack>
+      <section
+        className={clsx(
+          "grid-cols-[repeat(auto-fit,minmax(min(250px,100%),1fr))]",
+          "clump:gap-y-[clamp(2rem,6vw,6rem)] gap-y-24",
+          "grid gap-x-24 lg:gap-12 xl:gap-24 "
+        )}
+      >
+        <Stack className="gap-x-24 clump:gap-y-[clamp(2rem,6vw,6rem)] gap-y-24">
+          <Stack data-aos-delay="0">
             <Title size={26}>Policy</Title>
             <Text className="text-lg" color="accent.4">
               She has built movements across the globe by providing expertise in
@@ -99,7 +105,7 @@ export function Leadership() {
             </Text>
           </Stack>
 
-          <Stack>
+          <Stack data-aos-delay="250">
             <Title size={26}>Investment</Title>
             <Text className="text-lg text-accent-40">
               Africa is the world's next big growth market. Jendayi is committed
@@ -116,7 +122,11 @@ export function Leadership() {
           </Stack>
         </Stack>
 
-        <section className="relative self-center hidden lg:block h-max">
+        <section
+          data-aos="zoom-in"
+          data-aos-delay="350"
+          className="relative self-center hidden lg:block h-max"
+        >
           <div
             style={{
               backgroundImage:
@@ -141,12 +151,12 @@ export function Leadership() {
             }}
             className="relative p-4 rounded-b-full"
           >
-            <div className="h-0 pb-[150%]"></div>
+            <div className="h-0 pb-[175%]"></div>
           </div>
         </section>
 
-        <Stack className="gap-x-24 gap-y-8">
-          <Stack>
+        <Stack className="gap-x-24 clump:gap-y-[clamp(2rem,6vw,6rem)] gap-y-24">
+          <Stack data-aos-delay="500">
             <Title size={26}>Consultancy</Title>
             <Text className="text-lg" color="accent.4">
               Her business advisory capabilities have helped clients to optimize
@@ -156,7 +166,7 @@ export function Leadership() {
             </Text>
           </Stack>
 
-          <Stack>
+          <Stack data-aos-delay="750">
             <Title size={26}>BHW International</Title>
             <Text className="text-lg text-accent-40">
               BHW is an integrated real estate holding company that provides
@@ -185,6 +195,7 @@ export function Leadership() {
           </Text>
           <Text
             weight={600}
+            data-aos="zoom-in"
             className="py-4 clump:text-[clamp(1.5rem,2vw,2.25rem)] text-4xl font-clash clump:leading-[clamp(3ex,4vw,4rem)] leading-[64px] flex-1"
           >
             You can make money, but I want you to make money and do good as

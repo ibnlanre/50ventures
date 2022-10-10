@@ -46,14 +46,6 @@ export function BHW() {
                 accessible to more families is our North star at BHW.
               </span>
             </Text>
-            <Text>
-              <span className="font-medium">Visit:</span>{" "}
-              <Link href="https://www.africaexchange.com" passHref>
-                <a className="underline break-all text-accent-70">
-                  https://www.africaexchange.com
-                </a>
-              </Link>
-            </Text>
           </Stack>
         </div>
 

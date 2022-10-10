@@ -8,6 +8,8 @@ import { MantineProvider } from "@mantine/styles";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
+import FavIcon from "../favicon.ico";
+
 function App({ Component, pageProps }) {
   const router = useRouter();
   function handleRouteChange(url) {
@@ -55,7 +57,7 @@ function App({ Component, pageProps }) {
       }}
     >
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={FavIcon.src} />
         {/* https://nextjs.org/docs/messages/no-document-viewport-meta */}
         {/* put <meta name="viewport" /> here */}
       </Head>

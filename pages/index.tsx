@@ -8,11 +8,16 @@ import {
   Organization,
   Projects,
 } from "@/layouts";
+import Head from "next/head";
 import { Fragment } from "react";
 
 function Home() {
   return (
     <Fragment>
+      <Head>
+        <title>50Ventures</title>
+        <meta name="description" content="" />
+      </Head>
       <NavBar />
       <FrontPage />
       <Organization />
