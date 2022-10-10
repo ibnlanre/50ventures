@@ -1,5 +1,6 @@
 import { Button, clsx, Group, Stack, Text, Title } from "@mantine/core";
 import { useState } from "react";
+import { LazyLoadImage as Image } from "react-lazy-load-image-component";
 
 import Marquee from "react-fast-marquee";
 import Abbott from "./assets/abbott.png";
@@ -70,7 +71,7 @@ export function FrontPage() {
       id="home"
       className={clsx(
         "max-w-screen-xl mx-auto",
-        "clump:pt-[clamp(7rem,12vw,12rem)] pt-48",
+        "clump:pt-[clamp(5rem,9vw,9rem)] pt-36",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >
@@ -161,7 +162,8 @@ export function FrontPage() {
         <Marquee gradient={false} className="flex-1">
           <div className="flex h-14">
             {images.map(({ src }, idx) => (
-              <img
+              <Image
+                effect="blur"
                 className="object-contain px-6"
                 height="100%"
                 width="auto"

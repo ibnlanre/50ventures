@@ -1,4 +1,5 @@
 import { clsx, Stack, Text, Title } from "@mantine/core";
+import { LazyLoadImage as Image } from "react-lazy-load-image-component";
 
 import MamaWithSickle from "./assets/mama_with_sickle.png";
 import EastAfricaExchange from "./assets/east_africa_exchange.png";
@@ -42,7 +43,7 @@ export function Investments() {
             <Text>
               <span className="font-medium">Visit:</span>{" "}
               <Link href="https://www.ea-africaexchange.com" passHref>
-                <a className="underline text-accent-70">
+                <a className="underline break-all text-accent-70">
                   https://www.ea-africaexchange.com
                 </a>
               </Link>
@@ -50,7 +51,8 @@ export function Investments() {
           </Stack>
         </div>
 
-        <img
+        <Image
+          effect="blur"
           src={EastAfricaExchange.src}
           width="100%"
           height={522}
@@ -70,7 +72,8 @@ export function Investments() {
           "clump:gap-[clamp(1rem,7vw,7rem)] gap-28"
         )}
       >
-        <img
+        <Image
+          effect="blur"
           src={MamaWithSickle.src}
           width="100%"
           height={522}
@@ -108,7 +111,7 @@ export function Investments() {
             <Text>
               <span className="font-medium">Visit:</span>{" "}
               <Link href="https://www.africaexchange.com" passHref>
-                <a className="underline text-accent-70">
+                <a className="underline break-all text-accent-70">
                   https://www.africaexchange.com
                 </a>
               </Link>

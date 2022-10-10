@@ -1,5 +1,6 @@
 import "@/css/index.css";
 import "aos/dist/aos.css";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import aos from "aos";
 import Head from "next/head";

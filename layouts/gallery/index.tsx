@@ -7,6 +7,7 @@ import SittingWithMadam from "./assets/sitted_with_madam.jpeg";
 import PresidentMandela from "./assets/president_mandela.png";
 import CarnegieMellon from "./assets/carnegie_mellon_university.jpg";
 
+import { LazyLoadImage as Image } from "react-lazy-load-image-component";
 import { clsx, Stack, Text, Title } from "@mantine/core";
 import { css } from "@emotion/css";
 
@@ -73,10 +74,6 @@ const imagePack = [
   },
 ];
 
-function Summary() {
-  return <></>
-}
-
 export function Gallery() {
   return (
     <Stack
@@ -118,7 +115,8 @@ export function Gallery() {
             })
           )}
         >
-          <img
+          <Image
+          effect="blur"
             className="rounded-3xl"
             src={OvalOffice.src}
             width="100%"
@@ -170,7 +168,8 @@ export function Gallery() {
               })
             )}
           >
-            <img
+            <Image
+            effect="blur"
               className="rounded-3xl"
               src={CorporateCouncil.src}
               width="100%"
@@ -210,7 +209,8 @@ export function Gallery() {
               })
             )}
           >
-            <img
+            <Image
+            effect="blur"
               className="rounded-3xl"
               src={PresidentBush.src}
               width="100%"
@@ -253,7 +253,8 @@ export function Gallery() {
               })
             )}
           >
-            <img
+            <Image
+            effect="blur"
               className="rounded-3xl"
               src={HandShakeMeeting.src}
               width="100%"
@@ -293,7 +294,8 @@ export function Gallery() {
               })
             )}
           >
-            <img
+            <Image
+            effect="blur"
               className="rounded-3xl"
               src={SouthSudanPresident.src}
               width="100%"
@@ -343,7 +345,8 @@ export function Gallery() {
             })
           )}
         >
-          <img
+          <Image
+          effect="blur"
             className="rounded-3xl"
             src={SittingWithMadam.src}
             width="100%"
@@ -384,7 +387,8 @@ export function Gallery() {
             })
           )}
         >
-          <img
+          <Image
+          effect="blur"
             width="100%"
             height="100%"
             alt="president mandela"

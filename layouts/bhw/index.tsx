@@ -1,9 +1,9 @@
 import { clsx, Group, Stack, Text, Title } from "@mantine/core";
+import { LazyLoadImage as Image } from "react-lazy-load-image-component";
 
 import BHWLogo from "./assets/bhw_logo.jpeg";
 import Condo from "./assets/condo.png";
 import FrontYard from "./assets/front_yard.png";
-import Link from "next/link";
 
 export function BHW() {
   return (
@@ -57,7 +57,8 @@ export function BHW() {
             )}
           >
             <div>
-              <img
+              <Image
+                effect="blur"
                 className="rounded-3xl"
                 src={BHWLogo.src}
                 width="100%"
@@ -70,7 +71,8 @@ export function BHW() {
               />
             </div>
             <div>
-              <img
+              <Image
+                effect="blur"
                 src={Condo.src}
                 width="100%"
                 height="100%"
@@ -111,7 +113,8 @@ export function BHW() {
                 &#8222;
               </Text>
             </Group>
-            <img
+            <Image
+              effect="blur"
               src={FrontYard.src}
               width="100%"
               height="auto"

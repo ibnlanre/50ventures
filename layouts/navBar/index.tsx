@@ -18,7 +18,7 @@ export function NavBar() {
     <Group
       py="lg"
       className={clsx(
-        "max-w-screen-xl right-0 left-0 mx-auto w-full fixed top-0 z-50",
+        "max-w-screen-xl right-0 left-0 mx-auto w-full sticky top-0 z-50",
         "clump:sm:px-[clamp(5px,5vw,5rem)] px-4 sm:px-20"
       )}
       style={{
