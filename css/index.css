@@ -8,7 +8,11 @@
     scroll-behavior: smooth !important;
 }
 
+html, body {
+    color: #002D62 !important;
+}
+
 .stripe {
-    background-image: linear-gradient(135deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent);
+    background-image: linear-gradient(225deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent);
     background-size: 1rem 1rem;
 }

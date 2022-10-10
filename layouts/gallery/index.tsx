@@ -98,7 +98,7 @@ export function Gallery() {
           <Title className="text-3xl font-clash" order={2} weight={700}>
             GALLERY
           </Title>
-          <Text className="leading-[40px] text-lg">
+          <Text color="accent.4" className="leading-[40px] text-lg">
             These images speak a thousand words on our impact and drive. We
             believe in delivering transformation through strategic initiatives
             that deploy innovative ideas alongside deep networks of valuable

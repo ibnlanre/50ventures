@@ -1,13 +1,5 @@
-import {
-  clsx,
-  Divider,
-  Group,
-  ScrollArea,
-  Spoiler,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
+import { clsx, Divider, Group, Stack, Text, Title } from "@mantine/core";
+
 import MazePattern from "./assets/maze-pattern.png";
 import JendayiFrazer from "./assets/jendayi-frazer.png";
 import Link from "next/link";

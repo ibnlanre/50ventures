@@ -29,7 +29,9 @@ export function NavBar() {
       position="apart"
     >
       <Link href="/" passHref>
-        <Logo />
+        <a>
+          <Logo />
+        </a>
       </Link>
 
       <Mobile hash={hash} />
@@ -58,7 +60,12 @@ export function NavBar() {
             </Link>
           ))}
         </Group>
-        <Button className="text-white stripe">Contact Us</Button>
+
+        <Link href="/contact-us" passHref>
+          <Button component="a" className="text-white stripe">
+            Contact Us
+          </Button>
+        </Link>
       </Group>
     </Group>
   );

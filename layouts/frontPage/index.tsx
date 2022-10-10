@@ -1,7 +1,7 @@
 import { Button, clsx, Group, Stack, Text, Title } from "@mantine/core";
-import lqip from "lqip-modern";
-import Marquee from "react-fast-marquee";
+import { useState } from "react";
 
+import Marquee from "react-fast-marquee";
 import Abbott from "./assets/abbott.png";
 import Skyscraper from "./assets/skyscraper.jpeg";
 import AFDB from "./assets/afdb.png";
@@ -10,7 +10,7 @@ import ConservationIntl from "./assets/conservation-intl.png";
 import Disney from "./assets/disney.png";
 import IBM from "./assets/ibm.png";
 import MoIbrahim from "./assets/mo-ibrahim.png";
-import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const images: Array<{
   src: string;
@@ -85,7 +85,10 @@ export function FrontPage() {
           className="clump:gap-[clamp(1rem,3vw,3rem)] gap-12"
           align="flex-start"
         >
-          <Text className="rounded-[35px] py-3 bg-accent-10 bg-opacity-10" px="lg">
+          <Text
+            className="rounded-[35px] py-3 bg-accent-10 bg-opacity-10"
+            px="lg"
+          >
             🏆 Award Winning Investment Consultant
           </Text>
           <Title
@@ -102,7 +105,12 @@ export function FrontPage() {
             business investments, providing innovative ideas on governance,
             stability and security, enterprise, and risk management.
           </Text>
-          <Button id="partners" className="stripe">Contact Us</Button>
+          
+          <Link href="/contact-us" passHref>
+            <Button id="partners" component="a" className="text-white stripe">
+              Contact Us
+            </Button>
+          </Link>
         </Stack>
 
         <section className="relative hidden sm:block">
@@ -146,7 +154,7 @@ export function FrontPage() {
         align="start"
         className="flex-col pt-16 clump:pt-[clamp(1rem,4vw,4rem)] sm:flex-row"
       >
-        <Text className="max-w-[18rem]">
+        <Text color="accent.4" className="max-w-[18rem] font-semibold">
           Trusted by more than 50+ companies worldwide:
         </Text>
 

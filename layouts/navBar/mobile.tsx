@@ -64,7 +64,12 @@ export function Mobile({ hash }) {
               </Button>
             </Link>
           ))}
-          <Button className="text-white stripe">Contact Us</Button>
+          
+          <Link href="/contact-us" passHref>
+            <Button component="a" className="text-white stripe">
+              Contact Us
+            </Button>
+          </Link>
         </Stack>
       </Popover.Dropdown>
     </Popover>
