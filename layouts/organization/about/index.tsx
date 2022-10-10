@@ -44,6 +44,7 @@ export function About() {
           showLabel="View More"
           classNames={{
             root: "leading-[40px] text-accent-40 text-lg",
+            control: "underline text-accent-70",
             content: "duration-500"
           }}
         >

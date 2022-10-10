@@ -8,10 +8,11 @@ import {
   Organization,
   Projects,
 } from "@/layouts";
+import { Fragment } from "react";
 
 function Home() {
   return (
-    <>
+    <Fragment>
       <NavBar />
       <FrontPage />
       <Organization />
@@ -20,7 +21,7 @@ function Home() {
       <Awards />
       <Gallery />
       <Footer />
-    </>
+    </Fragment>
   );
 }
 

@@ -44,7 +44,14 @@ export function Mobile({ hash }) {
       >
         <Stack align="flex-start">
           {navItems.map(({ title, id }, idx) => (
-            <Link key={idx} href={"#" + id} passHref>
+            <Link
+              key={idx}
+              href={{
+                pathname: "/",
+                hash: id,
+              }}
+              passHref
+            >
               <Button
                 className={clsx(
                   "bg-transparent px-0",

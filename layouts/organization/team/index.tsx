@@ -80,13 +80,14 @@ export function Team() {
           MEET THE TEAM
         </Title>
         <Spoiler
-          classNames={{
-            control: "underline text-accent-40",
-          }}
-          className="leading-[40px] text-lg"
           maxHeight={320}
           hideLabel="Hide"
           showLabel="View More"
+          classNames={{
+            root: "leading-[40px] text-accent-40 text-lg",
+            control: "underline text-accent-70",
+            content: "duration-500",
+          }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus in
           lorem fusce mauris fermentum congue sit maecenas. Fermentum eget elit

@@ -35,7 +35,14 @@ export function NavBar() {
       <Group className="hidden ml-auto gap-7 md:flex">
         <Group className="gap-6">
           {navItems.map(({ title, id }, idx) => (
-            <Link key={idx} href={"#" + id} passHref>
+            <Link
+              key={idx}
+              href={{
+                pathname: "/",
+                hash: id,
+              }}
+              passHref
+            >
               <Button
                 className={clsx(
                   "bg-transparent px-0",

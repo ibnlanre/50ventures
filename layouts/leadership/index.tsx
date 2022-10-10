@@ -10,6 +10,7 @@ import {
 } from "@mantine/core";
 import MazePattern from "./assets/maze-pattern.png";
 import JendayiFrazer from "./assets/jendayi-frazer.png";
+import Link from "next/link";
 
 export function Leadership() {
   return (
@@ -99,17 +100,17 @@ export function Leadership() {
 
           <Stack>
             <Title size={26}>Investment</Title>
-            <Spoiler
-              hideLabel="Hide"
-              showLabel="View More"
-              maxHeight={150}
-              className="text-lg text-accent-40"
-            >
+            <Text className="text-lg text-accent-40">
               She has built movements across the globe by providing expertise in
               leadership and governance program development, university
               engagement strategies, and event representation, coordination, and
               production.
-            </Spoiler>
+            </Text>
+            <Link href="/investments" passHref>
+              <Text component="a" className="underline text-accent-70">
+                View More
+              </Text>
+            </Link>
           </Stack>
         </Stack>
 
@@ -155,16 +156,12 @@ export function Leadership() {
 
           <Stack>
             <Title size={26}>BHW International</Title>
-            <Spoiler
-              hideLabel="Hide"
-              showLabel="View More"
-              maxHeight={150}
-              className="text-lg text-accent-40"
-            >
+            <Text className="text-lg text-accent-40">
               BHW is an integrated real estate holding company that provides
               secure, affordable and functional homes by building tangible
               assets that can be passed down to future generation.
-            </Spoiler>
+            </Text>
+            <Text className="underline text-accent-70">View More</Text>
           </Stack>
         </Stack>
       </section>
