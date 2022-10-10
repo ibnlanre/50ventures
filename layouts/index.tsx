@@ -7,3 +7,4 @@ export * from "./awards";
 export * from "./gallery";
 export * from "./footer";
 export * from "./investments";
+export * from "./bhw";

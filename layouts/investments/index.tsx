@@ -9,7 +9,7 @@ export function Investments() {
     <Stack
       className={clsx(
         "max-w-screen-xl mx-auto overflow-hidden",
-        "clump:py-[clamp(6rem,9vw,9rem)] py-36",
+        "clump:py-[clamp(6rem,12vw,12rem)] py-48",
         "clump:px-[clamp(5px,5vw,5rem)] px-20",
         "clump:gap-[clamp(3rem,7vw,7rem)] gap-28"
       )}
@@ -27,14 +27,17 @@ export function Investments() {
           </Title>
           <Stack className="text-xl" spacing="md">
             <Text className="text-accent-40">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              et pharetra, risus sem nibh. Aliquam ac morbi euismod nisi,
-              imperdiet aliquam. Augue et in consectetur elementum mauris eget.
-              Lacus, mi ut quis eget mattis at malesuada. Eget gravida dapibus
-              vel, ut morbi nec viverra lectus. Luctus tellus tristique odio
-              cras id vitae nam et metus. A elementum lectus pellentesque enim,
-              eget. Pharetra suspendisse sit pellentesque egestas arcu
-              hendrerit. Interdum integer.
+              The East Africa Exchange (EAX) is a regional commodity exchange
+              legally registered throughout East Africa Community (EAC) partner
+              states and is currently established with a head office in Kigali
+              Rwanda. EAX offers participants of the physical commodities
+              markets, such as agricultural / mineral producers and traders an
+              excellent opportunity to trade their products locally, regionally
+              and on the international markets. EAX was initially created to
+              link smallholder farmers to global markets, secure competitive
+              prices for products, and facilitate access to financing
+              opportunities. Today it is expanding its trading operations in
+              mineral and metal space.
             </Text>
             <Text>
               <span className="font-medium">Visit:</span>{" "}
@@ -52,7 +55,7 @@ export function Investments() {
           width="100%"
           height={522}
           alt="man holding banner in rwanda"
-          className="rounded-3xl"
+          className="rounded-3xl backdrop-grayscale hover:backdrop-filter-none"
           style={{
             objectFit: "cover",
             objectPosition: "0 5%",
@@ -71,11 +74,12 @@ export function Investments() {
           src={MamaWithSickle.src}
           width="100%"
           height={522}
-          alt="man holding banner in rwanda"
-          className="rounded-3xl"
+          alt="woman standing beside X"
+          className="rounded-3xl filter grayscale hover:filter-none"
           style={{
             objectFit: "cover",
             objectPosition: "20% 30%",
+            filter: "grayscale(100%)",
           }}
         />
 
@@ -84,15 +88,22 @@ export function Investments() {
             Africa Commodities Exchange Ltd. (AFEX)
           </Title>
           <Stack className="text-xl" spacing="md">
-            <Text className="text-accent-40">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              et pharetra, risus sem nibh. Aliquam ac morbi euismod nisi,
-              imperdiet aliquam. Augue et in consectetur elementum mauris eget.
-              Lacus, mi ut quis eget mattis at malesuada. Eget gravida dapibus
-              vel, ut morbi nec viverra lectus. Luctus tellus tristique odio
-              cras id vitae nam et metus. A elementum lectus pellentesque enim,
-              eget. Pharetra suspendisse sit pellentesque egestas arcu
-              hendrerit. Interdum integer.
+            <Text className="grid gap-3 text-accent-40">
+              <span>
+                At AFEX, we harness Africa's commodities and talent to build
+                shared wealth and prosperity. Our infrastructure and platform
+                investments work to unlock capital to power a trust economy in
+                Africa's commodities markets.
+              </span>
+              <span>
+                Since inception in 2014, we have developed and deployed a viable
+                commodities exchange model for the African market, and are on
+                track to impact one million producers; providing services in
+                productivity and value capture and access to finance and
+                markets. By deploying an efficient market system, we will
+                facilitate trade with Africa worth over USD500 million in the
+                next five years.
+              </span>
             </Text>
             <Text>
               <span className="font-medium">Visit:</span>{" "}

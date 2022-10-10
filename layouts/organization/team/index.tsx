@@ -89,12 +89,8 @@ export function Team() {
             content: "duration-500",
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus in
-          lorem fusce mauris fermentum congue sit maecenas. Fermentum eget elit
-          ullamcorper congue quis nulla sit. Amet mauris tristique placerat
-          commodo. Tristique vitae at massa porta eleifend sagittis consectetur
-          vel. Interdum egestas enim dignissim ultrices cursus sem amet sit.
-          Suspendisse volutpat sit et aenean auctor. Imperdiet.
+          Benefit from the combined experience of our team of professionals
+          working to deliver results for businesses and projects that matter.
         </Spoiler>
 
         <article
@@ -136,7 +132,7 @@ export function Team() {
                       className="h-0 pb-[100%] rounded-t-full"
                     >
                       <div
-                        className="absolute bottom-0 left-0 right-0 p-8 m-1 text-white"
+                        className="absolute bottom-0 left-0 right-0 p-6 m-1 text-white"
                         style={{
                           backgroundImage:
                             "linear-gradient(116.82deg, rgba(0, 45, 98, 0.5) 0%, rgba(0, 45, 98, 0.07) 100%)",
@@ -145,11 +141,12 @@ export function Team() {
                       >
                         <Group position="apart">
                           <Title className="text-lg">{name}</Title>
+
                           {handle && (
                             <Link href={handle} passHref>
                               <ActionIcon
                                 component="a"
-                                className="bg-transparent"
+                                className="text-white bg-transparent"
                                 target="_blank"
                               >
                                 <svg width="32" height="32" viewBox="0 0 24 24">
@@ -162,7 +159,7 @@ export function Team() {
                             </Link>
                           )}
                         </Group>
-                        <Text className="text-xs">{title}</Text>
+                        <Text>{title}</Text>
                       </div>
                     </div>
                   </div>

@@ -70,7 +70,7 @@ export function FrontPage() {
       id="home"
       className={clsx(
         "max-w-screen-xl mx-auto",
-        "clump:pt-[clamp(6rem,9vw,9rem)] pt-36",
+        "clump:pt-[clamp(6rem,12vw,12rem)] pt-48",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >

@@ -40,11 +40,18 @@ export function Organization() {
               borderWidth: "3px",
             },
           },
+          tabLabel: {
+            gap: 8
+          }
+          
         }}
       >
         <Tabs.List>
           <Tabs.Tab value="about">About</Tabs.Tab>
-          <Tabs.Tab value="mission_statement">Mission Statement</Tabs.Tab>
+          <Tabs.Tab value="mission_statement">
+            <span>Mission</span>
+            <span className="hidden sm:inline">Statement</span>
+          </Tabs.Tab>
           <Tabs.Tab value="team">Team</Tabs.Tab>
         </Tabs.List>
 

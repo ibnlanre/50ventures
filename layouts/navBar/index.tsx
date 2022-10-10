@@ -28,7 +28,9 @@ export function NavBar() {
       }}
       position="apart"
     >
-      <Logo />
+      <Link href="/" passHref>
+        <Logo />
+      </Link>
 
       <Mobile hash={hash} />
 

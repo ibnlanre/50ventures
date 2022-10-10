@@ -17,7 +17,8 @@ export function Leadership() {
     <Stack
       id="leadership"
       className={clsx(
-        "max-w-screen-xl mx-auto clump:gap-[clamp(2.5rem,5vw,20rem)]",
+        "max-w-screen-xl mx-auto",
+        "clump:gap-[clamp(2.5rem,5vw,20rem)] gap-80",
         "clump:pt-[clamp(4rem,9vw,9rem)] pt-36",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
@@ -101,10 +102,11 @@ export function Leadership() {
           <Stack>
             <Title size={26}>Investment</Title>
             <Text className="text-lg text-accent-40">
-              She has built movements across the globe by providing expertise in
-              leadership and governance program development, university
-              engagement strategies, and event representation, coordination, and
-              production.
+              Africa is the world's next big growth market. Jendayi is committed
+              to protecting and enhancing investment opportunities in the
+              African market. We are currently identifying additional investment
+              opportunities that also benefit the standing of African countries,
+              economies, and people. Our current investments include
             </Text>
             <Link href="/investments" passHref>
               <Text component="a" className="underline text-accent-70">
@@ -161,7 +163,11 @@ export function Leadership() {
               secure, affordable and functional homes by building tangible
               assets that can be passed down to future generation.
             </Text>
-            <Text className="underline text-accent-70">View More</Text>
+            <Link href="/bhw" passHref>
+              <Text component="a" className="underline text-accent-70">
+                View More
+              </Text>
+            </Link>
           </Stack>
         </Stack>
       </section>
@@ -179,7 +185,7 @@ export function Leadership() {
           </Text>
           <Text
             weight={600}
-            className="py-4 text-4xl font-clash leading-[64px] flex-1"
+            className="py-4 clump:text-[clamp(1.5rem,2vw,2.25rem)] text-4xl font-clash clump:leading-[clamp(3ex,4vw,4rem)] leading-[64px] flex-1"
           >
             You can make money, but I want you to make money and do good as
             well. Do good making money, and make the money do good.

@@ -1,13 +1,5 @@
 import { css } from "@emotion/css";
-import {
-  ActionIcon,
-  clsx,
-  Group,
-  Stack,
-  Table,
-  Text,
-  Title,
-} from "@mantine/core";
+import { ActionIcon, clsx, Group, Stack, Table, Title } from "@mantine/core";
 import { ArrowLeft, ArrowRight } from "iconsax-react";
 import { useState } from "react";
 
@@ -49,15 +41,14 @@ const awards: Array<
 ];
 
 export function Awards() {
-  const [direction, setDirection] = useState(1);
   const [page, setPage] = useState(0);
 
   return (
     <Stack
       id="awards"
-      spacing={80}
       className={clsx(
         "max-w-screen-xl mx-auto overflow-hidden",
+        "clump:gap-[clamp(2.5rem,5vw,5rem)] gap-20",
         "clump:pt-[clamp(4rem,9vw,9rem)] pt-36",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
@@ -71,10 +62,7 @@ export function Awards() {
           <ActionIcon
             size={50}
             disabled={!page}
-            onClick={() => {
-              setPage(page - 1);
-              setDirection(0);
-            }}
+            onClick={() => setPage(page - 1)}
             className={clsx(
               "rounded-full",
               css({
@@ -101,10 +89,7 @@ export function Awards() {
                 },
               })
             )}
-            onClick={() => {
-              setPage(page + 1);
-              setDirection(1);
-            }}
+            onClick={() => setPage(page + 1)}
           >
             <ArrowRight color="#002D62" />
           </ActionIcon>
@@ -114,17 +99,19 @@ export function Awards() {
       {awards.map((awardPage, idx) => {
         return (
           idx === page && (
-            <Table data-aos={"slide-left"} data-aos-once="false" key={idx}>
+            <Table data-aos-once="false" key={idx}>
               {awardPage.map(({ date, award, description }, index) => {
                 return (
                   <tr
+                    data-aos="fade-up"
+                    data-aos-delay={200 * index}
                     className="align-top clump:text-[clamp(1rem,2vw,1.5rem)]"
                     key={index}
                   >
                     <td className="py-5 font-bold leading-loose text-accent-40">
                       {date}
                     </td>
-                    <td className="px-8 py-5 font-semibold leading-loose">
+                    <td className="px-4 py-5 font-semibold leading-loose sm:px-8">
                       {award}
                     </td>
                     <td className="py-5 font-medium leading-loose text-accent-40">

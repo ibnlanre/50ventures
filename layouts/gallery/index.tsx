@@ -115,9 +115,11 @@ export function Gallery() {
             GALLERY
           </Title>
           <Text className="leading-[40px] text-lg">
-            We believe that our work is the best way to get to know us. These
-            are our transformative work over the years. Showing you the
-            extraordinary possibilities of your business is why we exist.
+            These images speak a thousand words on our impact and drive. We
+            believe in delivering transformation through strategic initiatives
+            that deploy innovative ideas alongside deep networks of valuable
+            relationships. Sign on to unlock strategies and possibilities that
+            set your business and projects apart.
           </Text>
         </Stack>
       </Group>
