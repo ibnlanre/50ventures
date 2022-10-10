@@ -123,7 +123,7 @@ export function Gallery() {
             src={OvalOffice.src}
             width="100%"
             height="100%"
-            alt="bhw logo"
+            alt="the oval office"
             style={{
               objectFit: "cover",
               objectPosition: "0 5%",
@@ -138,8 +138,8 @@ export function Gallery() {
           >
             <Text
               className={clsx(
-                "clump:leading-[clamp(1.3rem,2vw,2.5rem)] clump:text-[clamp(14px,1.25vw,20px)]",
-                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
+                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
               )}
             >
               Dr. Jendayi E. Frazer, and President George W. Bush, Former U.S
@@ -175,7 +175,7 @@ export function Gallery() {
               src={CorporateCouncil.src}
               width="100%"
               height="100%"
-              alt="bhw logo"
+              alt="presiden samia suhulu hassan"
               style={{
                 objectFit: "cover",
                 objectPosition: "0 5%",
@@ -188,10 +188,12 @@ export function Gallery() {
               }}
               className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
             >
-              <Text className={clsx(
-                "clump:leading-[clamp(1.3rem,2vw,2.5rem)] clump:text-[clamp(14px,1.25vw,20px)]",
-                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
-              )}>
+              <Text
+                className={clsx(
+                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                  "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+                )}
+              >
                 Dr. Jendayi E. Frazer, and President Samia Suhulu Hassan of
                 Tanzania in DC 2022.
               </Text>
@@ -213,7 +215,7 @@ export function Gallery() {
               src={PresidentBush.src}
               width="100%"
               height="100%"
-              alt="bhw logo"
+              alt="president george w. bush"
               style={{
                 objectFit: "cover",
                 objectPosition: "center top",
@@ -226,10 +228,12 @@ export function Gallery() {
               }}
               className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
             >
-              <Text className={clsx(
-                "clump:leading-[clamp(1.3rem,2vw,2.5rem)] clump:text-[clamp(14px,1.25vw,20px)]",
-                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
-              )}>
+              <Text
+                className={clsx(
+                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                  "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+                )}
+              >
                 Dr. Jendayi E. Frazer, and President George W. Bush, at the Oval
                 Office, White House.
               </Text>
@@ -254,7 +258,7 @@ export function Gallery() {
               src={HandShakeMeeting.src}
               width="100%"
               height="100%"
-              alt="bhw logo"
+              alt="president paul kagame"
               style={{
                 objectFit: "cover",
                 objectPosition: "0 5%",
@@ -267,10 +271,12 @@ export function Gallery() {
               }}
               className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
             >
-              <Text className={clsx(
-                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
-                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
-              )}>
+              <Text
+                className={clsx(
+                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                  "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+                )}
+              >
                 Dr. Jendayi E. Frazer, and President Paul Kagame of Rwanda at
                 the Munich Security Conference (March, 2022)
               </Text>
@@ -278,7 +284,7 @@ export function Gallery() {
           </div>
           <div
             className={clsx(
-              "h-full group relative rounded-3xl overflow-hidden",
+              "group relative rounded-3xl overflow-hidden",
               css({
                 filter: "grayscale(1)",
                 "&:hover": {
@@ -292,7 +298,7 @@ export function Gallery() {
               src={SouthSudanPresident.src}
               width="100%"
               height="100%"
-              alt="bhw logo"
+              alt="president salva kiir"
               style={{
                 objectFit: "cover",
                 objectPosition: "center",
@@ -305,10 +311,12 @@ export function Gallery() {
               }}
               className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
             >
-              <Text className={clsx(
-                "clump:leading-[clamp(1.3rem,2vw,2.5rem)] clump:text-[clamp(14px,1.25vw,20px)]",
-                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
-              )}>
+              <Text
+                className={clsx(
+                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                  "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+                )}
+              >
                 Dr. Jendayi E. Frazer, with President Salva Kiir Mayardit of
                 Sudan at State House, Juba, South Sudan .
               </Text>
@@ -340,7 +348,7 @@ export function Gallery() {
             src={SittingWithMadam.src}
             width="100%"
             height="100%"
-            alt="bhw logo"
+            alt="presiden ellen johnson-sirleaf"
             style={{
               objectFit: "cover",
               objectPosition: "left top",
@@ -353,10 +361,12 @@ export function Gallery() {
             }}
             className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
           >
-            <Text className={clsx(
-                "clump:leading-[clamp(1.3rem,2vw,2.5rem)] clump:text-[clamp(14px,1.25vw,20px)]",
-                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
-              )}>
+            <Text
+              className={clsx(
+                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+              )}
+            >
               Dr. Jendayi E. Frazer, and President Ellen Johnson-Sirleaf of
               Liberia meeting in Monrovia.
             </Text>
@@ -377,7 +387,7 @@ export function Gallery() {
           <img
             width="100%"
             height="100%"
-            alt="bhw logo"
+            alt="president mandela"
             src={PresidentMandela.src}
             className="rounded-3xl"
             style={{
@@ -392,10 +402,12 @@ export function Gallery() {
             }}
             className="absolute top-0 content-end hidden w-full h-full group-hover:grid"
           >
-            <Text className={clsx(
-                "clump:leading-[clamp(1.3rem,2vw,2.5rem)] clump:text-[clamp(14px,1.25vw,20px)]",
-                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-5"
-              )}>
+            <Text
+              className={clsx(
+                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+              )}
+            >
               Dr. Jendayi E. Frazer, and Nelson Mandela of South Africa in DC.
             </Text>
           </div>
