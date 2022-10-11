@@ -4,8 +4,8 @@ import {
   LazyLoadImage as Image,
   LazyLoadComponent,
 } from "react-lazy-load-image-component";
+import { css } from "@emotion/css";
 
-import Marquee from "react-fast-marquee";
 import Abbott from "./assets/abbott.png";
 import Skyscraper from "./assets/skyscraper.jpeg";
 import AFDB from "./assets/afdb.png";
@@ -159,26 +159,48 @@ export function FrontPage() {
 
       <Group
         align="start"
-        className="flex-col pt-16 clump:pt-[clamp(1rem,4vw,4rem)] sm:flex-row"
+        className="flex-col pt-16 clump:pt-[clamp(1rem,4vw,4rem)] sm:flex-row overflow-hidden"
       >
         <Text color="accent.4" className="max-w-[18rem] font-semibold">
           Trusted by more than 50+ companies worldwide:
         </Text>
 
-        <Marquee gradient={false} className="flex-1">
-          <div className="flex h-14">
-            {images.map(({ src }, idx) => (
-              <Image
-                effect="blur"
-                className="object-contain px-6"
-                height="100%"
-                width="auto"
-                src={src}
-                key={idx}
-              />
-            ))}
-          </div>
-        </Marquee>
+        <div
+          className={clsx(
+            "flex-1 marquee flex overflow-hidden",
+            css({
+              "--ticker-duration": "20s",
+
+              "& > div": {
+                width: "fit-content",
+                willChange: "transform",
+                animationName: "marquee",
+                animationTimingFunction: "linear",
+                animationIterationCount: "infinite",
+                animationDuration: "var(--ticker-duration)",
+
+                ":hover > &": {
+                  animationPlayState: "paused",
+                },
+              },
+            })
+          )}
+        >
+          {Array.from({ length: 3 }, (e) => (
+            <div className="flex h-14">
+              {images.map(({ src }, idx) => (
+                <Image
+                  effect="blur"
+                  className="object-contain px-6"
+                  height="100%"
+                  width="auto"
+                  src={src}
+                  key={idx}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
       </Group>
     </Stack>
   );
