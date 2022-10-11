@@ -18,7 +18,7 @@ export function Mobile({ hash }) {
     >
       <Popover.Target>
         <ActionIcon
-          className="md:hidden"
+          className="self-start md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? (

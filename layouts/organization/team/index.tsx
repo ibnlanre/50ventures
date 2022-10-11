@@ -7,14 +7,14 @@ import {
   Text,
   Title,
 } from "@mantine/core";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 import JendayiFrazer from "./assets/jendayi_frazer.png";
 import TimothyShortley from "./assets/timothy_shortley.jpeg";
 import AyodejiBalogun from "./assets/ayodeji_balogun.jpeg";
 import RamonaDurham from "./assets/ramona_durham.png";
 import SheilaKaaya from "./assets/sheila_kaaya.png";
-import { css } from "@emotion/css";
-import { ArrowRight } from "iconsax-react";
+
 import Link from "next/link";
 
 const images = [
@@ -120,49 +120,56 @@ export function Team() {
                   >
                     <div className="p-1 m-1 bg-white rounded-t-full"></div>
                   </div>
-                  <div className="relative p-1">
-                    <div
-                      style={{
-                        backgroundImage: `url(${src})`,
-                        backgroundRepeat: "no-repeat",
-                        backgroundPositionX,
-                        backgroundPositionY,
-                        backgroundSize,
-                      }}
-                      className="h-0 pb-[100%] rounded-t-full"
-                    >
-                      <div
-                        className="absolute bottom-0 left-0 right-0 p-6 m-1 text-white"
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(116.82deg, rgba(0, 45, 98, 0.5) 0%, rgba(0, 45, 98, 0.07) 100%)",
-                          backdropFilter: "blur(39.1496px)",
-                        }}
-                      >
-                        <Group position="apart">
-                          <Title className="text-lg">{name}</Title>
 
-                          {handle && (
-                            <Link href={handle} passHref>
-                              <ActionIcon
-                                component="a"
-                                className="text-white bg-transparent"
-                                target="_blank"
-                              >
-                                <svg width="32" height="32" viewBox="0 0 24 24">
-                                  <path
-                                    fill="currentColor"
-                                    d="m11.93 5l2.83 2.83L5 17.59L6.42 19l9.76-9.75L19 12.07V5h-7.07Z"
-                                  />
-                                </svg>
-                              </ActionIcon>
-                            </Link>
-                          )}
-                        </Group>
-                        <Text>{title}</Text>
+                  <LazyLoadComponent>
+                    <div className="relative p-1">
+                      <div
+                        style={{
+                          backgroundImage: `url(${src})`,
+                          backgroundRepeat: "no-repeat",
+                          backgroundPositionX,
+                          backgroundPositionY,
+                          backgroundSize,
+                        }}
+                        className="h-0 pb-[100%] rounded-t-full"
+                      >
+                        <div
+                          className="absolute bottom-0 left-0 right-0 p-6 m-1 text-white"
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(116.82deg, rgba(0, 45, 98, 0.5) 0%, rgba(0, 45, 98, 0.07) 100%)",
+                            backdropFilter: "blur(39.1496px)",
+                          }}
+                        >
+                          <Group position="apart">
+                            <Title className="text-lg">{name}</Title>
+
+                            {handle && (
+                              <Link href={handle} passHref>
+                                <ActionIcon
+                                  component="a"
+                                  className="text-white bg-transparent"
+                                  target="_blank"
+                                >
+                                  <svg
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      fill="currentColor"
+                                      d="m11.93 5l2.83 2.83L5 17.59L6.42 19l9.76-9.75L19 12.07V5h-7.07Z"
+                                    />
+                                  </svg>
+                                </ActionIcon>
+                              </Link>
+                            )}
+                          </Group>
+                          <Text>{title}</Text>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </LazyLoadComponent>
                 </section>
               );
             }

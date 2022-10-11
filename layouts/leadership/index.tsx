@@ -1,4 +1,5 @@
 import { clsx, Divider, Group, Stack, Text, Title } from "@mantine/core";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 import MazePattern from "./assets/maze-pattern.png";
 import JendayiFrazer from "./assets/jendayi-frazer.png";
@@ -114,38 +115,40 @@ export function Leadership() {
           </Stack>
         </Stack>
 
-        <section
-          data-aos="zoom-in"
-          data-aos-delay="350"
-          className="relative self-center hidden lg:block h-max"
-        >
-          <div
-            style={{
-              backgroundImage:
-                "linear-gradient(180deg, #EEB111 0%, #3B90FB 100%)",
-            }}
-            className="absolute top-0 grid w-full h-full rounded-full"
+        <LazyLoadComponent>
+          <section
+            data-aos="zoom-in"
+            data-aos-delay="350"
+            className="relative self-center hidden lg:block h-max"
           >
             <div
               style={{
-                backgroundImage: `url(${MazePattern.src})`,
+                backgroundImage:
+                  "linear-gradient(180deg, #EEB111 0%, #3B90FB 100%)",
+              }}
+              className="absolute top-0 grid w-full h-full rounded-full"
+            >
+              <div
+                style={{
+                  backgroundImage: `url(${MazePattern.src})`,
+                  backgroundSize: "contain",
+                }}
+                className="p-1 m-1 bg-white rounded-full"
+              ></div>
+            </div>
+            <div
+              style={{
+                backgroundImage: `url(${JendayiFrazer.src})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "bottom",
                 backgroundSize: "contain",
               }}
-              className="p-1 m-1 bg-white rounded-full"
-            ></div>
-          </div>
-          <div
-            style={{
-              backgroundImage: `url(${JendayiFrazer.src})`,
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "bottom",
-              backgroundSize: "contain",
-            }}
-            className="relative p-4 rounded-b-full"
-          >
-            <div className="h-0 pb-[175%]"></div>
-          </div>
-        </section>
+              className="relative p-4 rounded-b-full"
+            >
+              <div className="h-0 pb-[175%]"></div>
+            </div>
+          </section>
+        </LazyLoadComponent>
 
         <Stack className="gap-x-24 clump:gap-y-[clamp(2rem,6vw,6rem)] gap-y-24">
           <Stack data-aos-delay="500">

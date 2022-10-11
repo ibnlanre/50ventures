@@ -1,4 +1,6 @@
 import { clsx, Spoiler, Stack, Text, Title } from "@mantine/core";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
+
 import HijabLady from "./assets/hijab-lady.png";
 
 export function About() {
@@ -20,18 +22,21 @@ export function About() {
         >
           <div className="p-1 m-1 mb-0 bg-white rounded-t-full"></div>
         </div>
-        <div className="relative p-4">
-          <div
-            style={{
-              backgroundImage: `url(${HijabLady.src})`,
-              backgroundRepeat: "no-repeat",
-              backgroundPositionX: "20%",
-              backgroundPositionY: "80%",
-              backgroundSize: "cover",
-            }}
-            className="h-0 pb-[100%] rounded-t-full"
-          ></div>
-        </div>
+
+        <LazyLoadComponent>
+          <div className="relative p-4">
+            <div
+              style={{
+                backgroundImage: `url(${HijabLady.src})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPositionX: "20%",
+                backgroundPositionY: "80%",
+                backgroundSize: "cover",
+              }}
+              className="h-0 pb-[100%] rounded-t-full"
+            />
+          </div>
+        </LazyLoadComponent>
       </section>
 
       <Stack spacing="xl">
@@ -45,7 +50,7 @@ export function About() {
           classNames={{
             root: "leading-[40px] text-accent-40 text-lg",
             control: "underline text-accent-70",
-            content: "duration-500"
+            content: "duration-500",
           }}
         >
           <Stack>

@@ -7,8 +7,6 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "css:build": "tailwindcss -i css/tailwind.css -o css/index.css",
-    "css:watch": "yarn css:build --watch",
     "next:dev": "next dev",
     "next:build": "next build",
     "next:start": "next start",

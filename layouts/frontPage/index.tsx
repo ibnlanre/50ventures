@@ -1,6 +1,9 @@
 import { Button, clsx, Group, Stack, Text, Title } from "@mantine/core";
 import { useState } from "react";
-import { LazyLoadImage as Image } from "react-lazy-load-image-component";
+import {
+  LazyLoadImage as Image,
+  LazyLoadComponent,
+} from "react-lazy-load-image-component";
 
 import Marquee from "react-fast-marquee";
 import Abbott from "./assets/abbott.png";
@@ -136,18 +139,21 @@ export function FrontPage() {
               credibilty
             </p>
           </div>
-          <div className="relative p-5 pb-0">
-            <div
-              style={{
-                backgroundImage: `url(${Skyscraper.src})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPositionX: "20%",
-                backgroundPositionY: "80%",
-                backgroundSize: "cover",
-              }}
-              className="h-0 pb-[120%] rounded-t-full"
-            ></div>
-          </div>
+
+          <LazyLoadComponent>
+            <div className="relative p-5 pb-0">
+              <div
+                style={{
+                  backgroundImage: `url(${Skyscraper.src})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundPositionX: "20%",
+                  backgroundPositionY: "80%",
+                  backgroundSize: "cover",
+                }}
+                className="h-0 pb-[120%] rounded-t-full"
+              ></div>
+            </div>
+          </LazyLoadComponent>
         </section>
       </div>
 

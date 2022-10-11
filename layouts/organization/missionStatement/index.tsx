@@ -1,4 +1,6 @@
 import { clsx, Spoiler, Stack, Title } from "@mantine/core";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
+
 import WomanWithGlasses from "./assets/woman-with-glasses.jpeg";
 
 export function MissionStatement() {
@@ -21,18 +23,21 @@ export function MissionStatement() {
         >
           <div className="p-1 m-1 mb-0 bg-white rounded-t-full"></div>
         </div>
-        <div className="relative p-4">
-          <div
-            style={{
-              backgroundImage: `url(${WomanWithGlasses.src})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "125% 185%",
-              backgroundPositionX: "40%",
-              backgroundPositionY: "35%",
-            }}
-            className="h-0 pb-[100%] rounded-t-full"
-          ></div>
-        </div>
+
+        <LazyLoadComponent>
+          <div className="relative p-4">
+            <div
+              style={{
+                backgroundImage: `url(${WomanWithGlasses.src})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "125% 185%",
+                backgroundPositionX: "40%",
+                backgroundPositionY: "35%",
+              }}
+              className="h-0 pb-[100%] rounded-t-full"
+            />
+          </div>
+        </LazyLoadComponent>
       </section>
 
       <Stack spacing="xl">
