@@ -1,5 +1,5 @@
 import { clsx, Spoiler, Stack, Title } from "@mantine/core";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
+import Image from "next/image";
 
 import WomanWithGlasses from "./assets/woman-with-glasses.jpeg";
 
@@ -13,7 +13,7 @@ export function MissionStatement() {
         "clump:sm:gap-[clamp(1rem,7vw,7rem)] gap-8 sm:gap-28"
       )}
     >
-      <section data-aos="fade-up" className="relative">
+      <section data-aos="zoom-in" className="relative">
         <div
           style={{
             backgroundImage:
@@ -24,20 +24,19 @@ export function MissionStatement() {
           <div className="p-1 m-1 mb-0 bg-white rounded-t-full"></div>
         </div>
 
-        <LazyLoadComponent>
-          <div className="relative p-4">
-            <div
-              style={{
-                backgroundImage: `url(${WomanWithGlasses.src})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "125% 185%",
-                backgroundPositionX: "40%",
-                backgroundPositionY: "35%",
-              }}
-              className="h-0 pb-[100%] rounded-t-full"
-            />
-          </div>
-        </LazyLoadComponent>
+        <div className="relative h-0 pb-[100%] m-4">
+          <Image
+            alt="woman with glasses"
+            src={WomanWithGlasses.src}
+            placeholder="blur"
+            blurDataURL={WomanWithGlasses.blurDataURL}
+            fill
+            style={{
+              objectPosition: "40% 35%",
+            }}
+            className="object-cover rounded-t-full"
+          />
+        </div>
       </section>
 
       <Stack spacing="xl">

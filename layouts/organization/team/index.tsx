@@ -7,7 +7,6 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 import JendayiFrazer from "./assets/jendayi_frazer.png";
 import TimothyShortley from "./assets/timothy_shortley.jpeg";
@@ -16,51 +15,56 @@ import RamonaDurham from "./assets/ramona_durham.png";
 import SheilaKaaya from "./assets/sheila_kaaya.png";
 
 import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
+import { CSSProperties } from "react";
 
-const images = [
+const images: Array<
+  {
+    name: string;
+    title: string;
+    objectPosition: CSSProperties["objectPosition"];
+    objectFit: CSSProperties["objectFit"];
+    handle: string;
+  } & StaticImageData
+> = [
   {
     ...JendayiFrazer,
     name: "Dr. Jendayi E. Frazer",
     title: "50 Ventures Partner & CEO",
-    backgroundPositionX: "20%",
-    backgroundPositionY: "80%",
-    backgroundSize: "cover",
+    objectPosition: "20% 80%",
+    objectFit: "cover",
     handle: null,
   },
   {
     ...TimothyShortley,
     name: "Timothy Shortley",
     title: "50 Ventures Partner & COO",
-    backgroundPositionX: "0",
-    backgroundPositionY: "0",
-    backgroundSize: "cover",
+    objectPosition: "0 0",
+    objectFit: "cover",
     handle: null,
   },
   {
     ...AyodejiBalogun,
     name: "Ayodeji Balogun",
     title: "Business Development & Investments Director",
-    backgroundPositionX: "0",
-    backgroundPositionY: "0",
-    backgroundSize: "cover",
+    objectPosition: "0 0",
+    objectFit: "cover",
     handle: "https://ng.linkedin.com/in/ayodejiobalogun",
   },
   {
     ...RamonaDurham,
     name: "Ramona Durham",
     title: "Marketing and Communications",
-    backgroundPositionX: "0",
-    backgroundPositionY: "0",
-    backgroundSize: "contain",
+    objectPosition: "0 0",
+    objectFit: "contain",
     handle: null,
   },
   {
     ...SheilaKaaya,
     name: "Sheila Kaaya",
     title: "Client Liaison and Support",
-    backgroundPositionX: "0",
-    backgroundPositionY: "0",
-    backgroundSize: "cover",
+    objectPosition: "0 0",
+    objectFit: "cover",
     handle: null,
   },
 ];
@@ -94,23 +98,27 @@ export function Team() {
         </Spoiler>
 
         <article
-          className={clsx(
-            "grid gap-10",
-            "grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))]"
-          )}
+          className="flex flex-wrap justify-center gap-10"
         >
           {images.map(
-            ({
-              name,
-              title,
-              backgroundPositionX,
-              backgroundPositionY,
-              backgroundSize,
-              handle,
-              src,
-            }) => {
+            (
+              {
+                name,
+                title,
+                objectPosition,
+                blurDataURL,
+                objectFit,
+                handle,
+                src,
+              },
+              idx
+            ) => {
               return (
-                <section className="relative">
+                <section
+                  data-aos="zoom-in"
+                  data-aos-delay={idx * 200}
+                  className="relative flex-1 mx-auto lg:mx-0 sm:max-w-[45%] lg:max-w-[5%] min-w-[min(100%,330px)]"
+                >
                   <div
                     style={{
                       backgroundImage:
@@ -121,55 +129,46 @@ export function Team() {
                     <div className="p-1 m-1 bg-white rounded-t-full"></div>
                   </div>
 
-                  <LazyLoadComponent>
-                    <div className="relative p-1">
-                      <div
-                        style={{
-                          backgroundImage: `url(${src})`,
-                          backgroundRepeat: "no-repeat",
-                          backgroundPositionX,
-                          backgroundPositionY,
-                          backgroundSize,
-                        }}
-                        className="h-0 pb-[100%] rounded-t-full"
-                      >
-                        <div
-                          className="absolute bottom-0 left-0 right-0 p-6 m-1 text-white"
-                          style={{
-                            backgroundImage:
-                              "linear-gradient(116.82deg, rgba(0, 45, 98, 0.5) 0%, rgba(0, 45, 98, 0.07) 100%)",
-                            backdropFilter: "blur(39.1496px)",
-                          }}
-                        >
-                          <Group position="apart">
-                            <Title className="text-lg">{name}</Title>
+                  <div className="relative m-1 h-0 pb-[100%]">
+                    <Image
+                      fill
+                      src={src}
+                      alt={title}
+                      placeholder="blur"
+                      blurDataURL={blurDataURL}
+                      style={{
+                        objectPosition,
+                        objectFit,
+                      }}
+                      className="rounded-t-full "
+                    />
+                  </div>
+                  <div
+                    className="absolute bottom-0 left-0 right-0 p-6 m-1 text-white"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(116.82deg, rgba(0, 45, 98, 0.5) 0%, rgba(0, 45, 98, 0.07) 100%)",
+                      backdropFilter: "blur(39.1496px)",
+                    }}
+                  >
+                    <Group position="apart">
+                      <Title className="text-lg">{name}</Title>
 
-                            {handle && (
-                              <Link href={handle} passHref>
-                                <ActionIcon
-                                  component="a"
-                                  className="text-white bg-transparent"
-                                  target="_blank"
-                                >
-                                  <svg
-                                    width="32"
-                                    height="32"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      fill="currentColor"
-                                      d="m11.93 5l2.83 2.83L5 17.59L6.42 19l9.76-9.75L19 12.07V5h-7.07Z"
-                                    />
-                                  </svg>
-                                </ActionIcon>
-                              </Link>
-                            )}
-                          </Group>
-                          <Text>{title}</Text>
-                        </div>
-                      </div>
-                    </div>
-                  </LazyLoadComponent>
+                      {handle && (
+                        <Link target="_blank" href={handle}>
+                          <ActionIcon className="text-white bg-transparent hover:text-black">
+                            <svg width="32" height="32" viewBox="0 0 24 24">
+                              <path
+                                fill="currentColor"
+                                d="m11.93 5l2.83 2.83L5 17.59L6.42 19l9.76-9.75L19 12.07V5h-7.07Z"
+                              />
+                            </svg>
+                          </ActionIcon>
+                        </Link>
+                      )}
+                    </Group>
+                    <Text>{title}</Text>
+                  </div>
                 </section>
               );
             }

@@ -3,31 +3,12 @@ import "aos/dist/aos.css";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 import aos from "aos";
-import Head from "next/head";
 
 import { MantineProvider } from "@mantine/styles";
-import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-import FavIcon from "../favicon.ico";
-
 function App({ Component, pageProps }) {
-  const router = useRouter();
-  function handleRouteChange(url) {
-    window["gtag"]("config", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
-      page_path: url,
-    });
-  }
-
   useEffect(() => {
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
-
-  useEffect(() => {
-    // document.documentElement.classList.add("text-[18px]");
     aos.init();
   }, []);
 
@@ -57,11 +38,6 @@ function App({ Component, pageProps }) {
         headings: { fontFamily: "Montserrat, sans-serif" },
       }}
     >
-      <Head>
-        <link rel="icon" href={FavIcon.src} />
-        {/* https://nextjs.org/docs/messages/no-document-viewport-meta */}
-        {/* put <meta name="viewport" /> here */}
-      </Head>
       <Component {...pageProps} />
     </MantineProvider>
   );

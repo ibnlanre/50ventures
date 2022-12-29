@@ -9,3 +9,4 @@ export * from "./footer";
 export * from "./investments";
 export * from "./bhw";
 export * from "./contact";
+export * from "./meta";

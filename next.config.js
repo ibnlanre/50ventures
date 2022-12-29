@@ -1,8 +1,6 @@
 const path = require("path");
-const createNextPluginPreval = require("next-plugin-preval/config");
-const withNextPluginPreval = createNextPluginPreval();
 
-module.exports = withNextPluginPreval({
+module.exports = {
   reactStrictMode: true,
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
@@ -23,4 +21,4 @@ module.exports = withNextPluginPreval({
   env: {
     LIVE_TICKER_URL: process.env.LIVE_TICKER_URL,
   },
-});
+};

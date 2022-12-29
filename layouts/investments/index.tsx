@@ -42,10 +42,11 @@ export function Investments() {
             </Text>
             <Text>
               <span className="font-medium">Visit:</span>{" "}
-              <Link href="https://www.ea-africaexchange.com" passHref>
-                <a className="underline break-all text-accent-70">
-                  https://www.ea-africaexchange.com
-                </a>
+              <Link
+                href="https://www.ea-africaexchange.com"
+                className="underline break-all text-accent-70"
+              >
+                https://www.ea-africaexchange.com
               </Link>
             </Text>
           </Stack>
@@ -110,10 +111,11 @@ export function Investments() {
             </Text>
             <Text>
               <span className="font-medium">Visit:</span>{" "}
-              <Link href="https://www.africaexchange.com" passHref>
-                <a className="underline break-all text-accent-70">
-                  https://www.africaexchange.com
-                </a>
+              <Link
+                href="https://www.africaexchange.com"
+                className="underline break-all text-accent-70"
+              >
+                https://www.africaexchange.com
               </Link>
             </Text>
           </Stack>

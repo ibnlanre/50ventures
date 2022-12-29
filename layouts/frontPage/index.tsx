@@ -1,10 +1,9 @@
 import { Button, clsx, Group, Stack, Text, Title } from "@mantine/core";
 import { useState } from "react";
-import {
-  LazyLoadImage as Image,
-  LazyLoadComponent,
-} from "react-lazy-load-image-component";
 import { css } from "@emotion/css";
+
+import Image from "next/image";
+import Link from "next/link";
 
 import Abbott from "./assets/abbott.png";
 import Skyscraper from "./assets/skyscraper.jpeg";
@@ -14,7 +13,6 @@ import ConservationIntl from "./assets/conservation-intl.png";
 import Disney from "./assets/disney.png";
 import IBM from "./assets/ibm.png";
 import MoIbrahim from "./assets/mo-ibrahim.png";
-import Link from "next/link";
 
 const images: Array<{
   src: string;
@@ -90,19 +88,25 @@ export function FrontPage() {
           align="flex-start"
         >
           <Text
+            data-aos="zoom-in"
             className="rounded-[35px] py-3 bg-accent-10 bg-opacity-10 clump:text-[clamp(12px,1vw,1rem)] text-base"
             px="lg"
           >
             🏆 Award Winning Investment Consultant
           </Text>
           <Title
+            data-aos="fade-up"
             className="text-5xl font-bold font-clash leading-[72px]"
             order={1}
           >
             Unveiling Strategic Pathways to Success
           </Title>
 
-          <Text className="text-lg text-accent-40 leading-[36px]">
+          <Text
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="text-lg text-accent-40 leading-[36px]"
+          >
             A market-leading, global, investment consultancy and strategic
             advisory company focused on high-growth African markets with
             expertise on international affairs affecting Africa and African
@@ -110,14 +114,23 @@ export function FrontPage() {
             stability and security, enterprise, and risk management.
           </Text>
 
-          <Link href="/contact-us" passHref>
-            <Button id="partners" component="a" className="text-white stripe">
+          <Link href="/contact-us">
+            <Button
+              data-aos="fade-up"
+              data-aos-delay="400"
+              id="partners"
+              className="text-white stripe"
+            >
               Contact Us
             </Button>
           </Link>
         </Stack>
 
-        <section className="relative hidden sm:block">
+        <section
+          data-aos="zoom-in"
+          data-aos-delay="600"
+          className="relative hidden sm:block"
+        >
           <div
             style={{
               backgroundImage:
@@ -140,20 +153,16 @@ export function FrontPage() {
             </p>
           </div>
 
-          <LazyLoadComponent>
-            <div className="relative p-5 pb-0">
-              <div
-                style={{
-                  backgroundImage: `url(${Skyscraper.src})`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundPositionX: "20%",
-                  backgroundPositionY: "80%",
-                  backgroundSize: "cover",
-                }}
-                className="h-0 pb-[120%] rounded-t-full"
-              ></div>
+          <div className="relative p-5 pb-0">
+            <div className="h-0 pb-[120%] relative">
+              <Image
+                alt="skyscraper"
+                src={Skyscraper.src}
+                className="rounded-t-full"
+                fill
+              />
             </div>
-          </LazyLoadComponent>
+          </div>
         </section>
       </div>
 
@@ -186,16 +195,17 @@ export function FrontPage() {
             })
           )}
         >
-          {Array.from({ length: 3 }, (e) => (
-            <div className="flex h-14">
-              {images.map(({ src }, idx) => (
+          {Array.from({ length: 3 }, (e, idx) => (
+            <div key={idx} className="flex h-14 min-w-max">
+              {images.map(({ src, alt, blurDataURL }, idx) => (
                 <Image
-                  effect="blur"
-                  className="object-contain px-6"
-                  height="100%"
-                  width="auto"
-                  src={src}
                   key={idx}
+                  fill
+                  placeholder="blur"
+                  blurDataURL={blurDataURL}
+                  className="object-contain !static px-6"
+                  alt={alt}
+                  src={src}
                 />
               ))}
             </div>

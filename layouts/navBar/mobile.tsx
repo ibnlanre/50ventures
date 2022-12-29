@@ -50,7 +50,6 @@ export function Mobile({ hash }) {
                 pathname: "/",
                 hash: id,
               }}
-              passHref
             >
               <Button
                 className={clsx(
@@ -58,17 +57,14 @@ export function Mobile({ hash }) {
                   hash.match(id) ? "text-accent-70" : "text-accent-50"
                 )}
                 variant="white"
-                component="a"
               >
                 {title}
               </Button>
             </Link>
           ))}
-          
-          <Link href="/contact-us" passHref>
-            <Button component="a" className="text-white stripe">
-              Contact Us
-            </Button>
+
+          <Link href="/contact-us">
+            <Button className="text-white stripe">Contact Us</Button>
           </Link>
         </Stack>
       </Popover.Dropdown>

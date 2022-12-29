@@ -1,15 +1,5 @@
 import { css } from "@emotion/css";
-import {
-  ActionIcon,
-  clsx,
-  Divider,
-  Group,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
-import { wrap } from "popmotion";
-import { motion, AnimatePresence } from "framer-motion";
+import { ActionIcon, clsx, Group, Stack, Text, Title } from "@mantine/core";
 import { ArrowLeft, ArrowRight } from "iconsax-react";
 import { useState } from "react";
 

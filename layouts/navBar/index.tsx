@@ -18,7 +18,7 @@ export function NavBar() {
     <Group
       py="lg"
       className={clsx(
-        "max-w-screen-xl right-0 left-0 mx-auto w-full sticky top-0 z-50",
+        "max-w-screen-xl mx-auto w-full sticky top-0 z-50",
         "clump:sm:px-[clamp(5px,5vw,5rem)] px-4 sm:px-20"
       )}
       style={{
@@ -28,16 +28,14 @@ export function NavBar() {
       }}
       position="apart"
     >
-      <Link href="/" passHref>
-        <a>
-          <Logo />
-        </a>
+      <Link href="/">
+        <Logo />
       </Link>
 
       <Mobile hash={hash} />
 
       <Group className="hidden ml-auto gap-7 md:flex">
-        <Group className="gap-6">
+        <Group className="gap-6 overflow-hidden">
           {navItems.map(({ title, id }, idx) => (
             <Link
               key={idx}
@@ -45,15 +43,16 @@ export function NavBar() {
                 pathname: "/",
                 hash: id,
               }}
-              passHref
             >
               <Button
+                data-aos="fade-left"
+                data-aos-delay={idx * 100}
+                data-aos-once
                 className={clsx(
                   "bg-transparent px-0",
                   hash.match(id) ? "text-accent-70" : "text-accent-50"
                 )}
                 variant="white"
-                component="a"
               >
                 {title}
               </Button>
@@ -61,8 +60,13 @@ export function NavBar() {
           ))}
         </Group>
 
-        <Link href="/contact-us" passHref>
-          <Button component="a" className="text-white stripe">
+        <Link href="/contact-us">
+          <Button
+            data-aos="fade-left"
+            data-aos-delay={navItems.length * 100}
+            data-aos-once
+            className="text-white stripe"
+          >
             Contact Us
           </Button>
         </Link>

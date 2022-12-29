@@ -88,7 +88,7 @@ export function Leadership() {
         )}
       >
         <Stack className="gap-x-24 clump:gap-y-[clamp(2rem,6vw,6rem)] gap-y-24">
-          <Stack data-aos-delay="0">
+          <Stack data-aos="fade-up">
             <Title size={26}>Policy</Title>
             <Text className="text-lg" color="accent.4">
               She has built movements across the globe by providing expertise in
@@ -98,7 +98,7 @@ export function Leadership() {
             </Text>
           </Stack>
 
-          <Stack data-aos-delay="250">
+          <Stack data-aos="fade-up" data-aos-delay="250">
             <Title size={26}>Investment</Title>
             <Text className="text-lg text-accent-40">
               Africa is the world's next big growth market. Jendayi is committed
@@ -107,10 +107,8 @@ export function Leadership() {
               opportunities that also benefit the standing of African countries,
               economies, and people. Our current investments include
             </Text>
-            <Link href="/investments" passHref>
-              <Text component="a" className="underline text-accent-70">
-                View More
-              </Text>
+            <Link href="/investments" className="underline text-accent-70">
+              <Text>View More</Text>
             </Link>
           </Stack>
         </Stack>
@@ -151,7 +149,7 @@ export function Leadership() {
         </LazyLoadComponent>
 
         <Stack className="gap-x-24 clump:gap-y-[clamp(2rem,6vw,6rem)] gap-y-24">
-          <Stack data-aos-delay="500">
+          <Stack data-aos="fade-up">
             <Title size={26}>Consultancy</Title>
             <Text className="text-lg" color="accent.4">
               Her business advisory capabilities have helped clients to optimize
@@ -161,17 +159,15 @@ export function Leadership() {
             </Text>
           </Stack>
 
-          <Stack data-aos-delay="750">
+          <Stack data-aos="fade-up" data-aos-delay="250">
             <Title size={26}>BHW International</Title>
             <Text className="text-lg text-accent-40">
               BHW is an integrated real estate holding company that provides
               secure, affordable and functional homes by building tangible
               assets that can be passed down to future generation.
             </Text>
-            <Link href="/bhw" passHref>
-              <Text component="a" className="underline text-accent-70">
-                View More
-              </Text>
+            <Link href="/bhw" className="underline text-accent-70">
+              <Text>View More</Text>
             </Link>
           </Stack>
         </Stack>
@@ -206,7 +202,11 @@ export function Leadership() {
             &#8222;
           </Text>
         </Group>
-        <Text className="self-end text-xl font-medium">
+        <Text
+          data-aos="zoom-in-left"
+          data-aos-delay="200"
+          className="self-end text-xl font-medium"
+        >
           - Jendayi E. Frazer
         </Text>
       </Stack>

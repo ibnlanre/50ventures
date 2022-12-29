@@ -7,7 +7,8 @@ import SittingWithMadam from "./assets/sitted_with_madam.jpeg";
 import PresidentMandela from "./assets/president_mandela.png";
 import CarnegieMellon from "./assets/carnegie_mellon_university.jpg";
 
-import { LazyLoadImage as Image } from "react-lazy-load-image-component";
+import Image from "next/image";
+
 import { clsx, Stack, Text, Title } from "@mantine/core";
 import { css } from "@emotion/css";
 
@@ -38,7 +39,6 @@ const imagePack = [
     displayWidth: 891,
     displayHeight: 637,
   },
-
   {
     ...SouthSudanPresident,
     id: "south_sudan_president",
@@ -95,7 +95,7 @@ export function Gallery() {
           <Title className="text-3xl font-clash" order={2} weight={700}>
             GALLERY
           </Title>
-          <Text color="accent.4" className="leading-[40px] text-lg">
+          <Text data-aos="zoom-in" color="accent.4" className="leading-[40px] text-lg">
             These images speak a thousand words on our impact and drive. We
             believe in delivering transformation through strategic initiatives
             that deploy innovative ideas alongside deep networks of valuable
@@ -116,12 +116,13 @@ export function Gallery() {
           )}
         >
           <Image
-          effect="blur"
-            className="rounded-3xl"
+            placeholder="blur"
+            className="rounded-3xl !relative"
+            blurDataURL={OvalOffice.blurDataURL}
             src={OvalOffice.src}
-            width="100%"
-            height="100%"
             alt="the oval office"
+            data-aos="fade-up"
+            fill
             style={{
               objectFit: "cover",
               objectPosition: "0 5%",
@@ -169,11 +170,12 @@ export function Gallery() {
             )}
           >
             <Image
-            effect="blur"
-              className="rounded-3xl"
+              placeholder="blur"
+              className="rounded-3xl !relative"
+              blurDataURL={CorporateCouncil.blurDataURL}
               src={CorporateCouncil.src}
-              width="100%"
-              height="100%"
+              data-aos="fade-up"
+              fill
               alt="presiden samia suhulu hassan"
               style={{
                 objectFit: "cover",
@@ -210,11 +212,12 @@ export function Gallery() {
             )}
           >
             <Image
-            effect="blur"
-              className="rounded-3xl"
+              placeholder="blur"
+              className="rounded-3xl !relative"
+              blurDataURL={PresidentBush.blurDataURL}
               src={PresidentBush.src}
-              width="100%"
-              height="100%"
+              data-aos="fade-up"
+              fill
               alt="president george w. bush"
               style={{
                 objectFit: "cover",
@@ -254,11 +257,12 @@ export function Gallery() {
             )}
           >
             <Image
-            effect="blur"
-              className="rounded-3xl"
+              placeholder="blur"
+              className="rounded-3xl !relative"
               src={HandShakeMeeting.src}
-              width="100%"
-              height="100%"
+              blurDataURL={HandShakeMeeting.blurDataURL}
+              data-aos="fade-up"
+              fill
               alt="president paul kagame"
               style={{
                 objectFit: "cover",
@@ -295,11 +299,12 @@ export function Gallery() {
             )}
           >
             <Image
-            effect="blur"
-              className="rounded-3xl"
+              placeholder="blur"
+              className="rounded-3xl !relative"
               src={SouthSudanPresident.src}
-              width="100%"
-              height="100%"
+              blurDataURL={SouthSudanPresident.blurDataURL}
+              data-aos="fade-up"
+              fill
               alt="president salva kiir"
               style={{
                 objectFit: "cover",
@@ -329,7 +334,7 @@ export function Gallery() {
 
       <section
         className={clsx(
-          "lg:grid-cols-none lg:auto-cols-[auto_1fr] md:grid-flow-col",
+          "lg:grid-cols-none lg:auto-cols-[1fr_auto] md:grid-flow-col",
           "clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10",
           "grid items-center sm:grid-cols-2"
         )}
@@ -346,11 +351,12 @@ export function Gallery() {
           )}
         >
           <Image
-          effect="blur"
-            className="rounded-3xl"
+            placeholder="blur"
+            className="rounded-3xl !relative"
+            blurDataURL={SittingWithMadam.blurDataURL}
             src={SittingWithMadam.src}
-            width="100%"
-            height="100%"
+            data-aos="fade-up"
+            fill
             alt="presiden ellen johnson-sirleaf"
             style={{
               objectFit: "cover",
@@ -388,12 +394,13 @@ export function Gallery() {
           )}
         >
           <Image
-          effect="blur"
-            width="100%"
-            height="100%"
+            placeholder="blur"
             alt="president mandela"
             src={PresidentMandela.src}
-            className="rounded-3xl"
+            className="rounded-3xl !relative"
+            blurDataURL={PresidentMandela.blurDataURL}
+            data-aos="fade-up"
+            fill
             style={{
               objectFit: "cover",
               objectPosition: "center top",

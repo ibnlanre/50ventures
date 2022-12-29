@@ -94,10 +94,8 @@ export function Footer() {
             </ul>
           </Stack>
           <Group>
-            <Link href="https://www.twitter.com/50ventures" passHref>
-              <a target="_blank">
-                <Twitter />
-              </a>
+            <Link target="_blank" href="https://www.twitter.com/50ventures">
+              <Twitter />
             </Link>
           </Group>
         </Stack>
