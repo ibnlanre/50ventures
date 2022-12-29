@@ -12,68 +12,6 @@ import Image from "next/image";
 import { clsx, Stack, Text, Title } from "@mantine/core";
 import { css } from "@emotion/css";
 
-const imagePack = [
-  {
-    ...OvalOffice,
-    id: "oval_office",
-    alt: "Bush, Secretary Powell, Vice President Cheney, and US Trade Representative Zoellick, Oval Office, White House Briefing",
-    transform:
-      "translate(-0.1156px, -0.410383px) scale(0.00187109px, 0.00360074px)",
-    displayWidth: 891,
-    displayHeight: 463,
-  },
-  {
-    ...CorporateCouncil,
-    id: "corporate_council",
-    alt: "Corporate Council on Africa",
-    transform: "translate(0 -0.431973) scale(0.00130208 0.00182026)",
-    displayWidth: 548,
-    displayHeight: 392,
-  },
-
-  {
-    ...HandShakeMeeting,
-    id: "hand_shake_meeting",
-    alt: "Hand Shake Meeting",
-    transform: "translate(-0.0406834) scale(0.00105602 0.0014771)",
-    displayWidth: 891,
-    displayHeight: 637,
-  },
-  {
-    ...SouthSudanPresident,
-    id: "south_sudan_president",
-    alt: "Meeting with President Salva Kiir at State House, Juba, South Sudan",
-    transform: "translate(-0.100694 -0.154476) scale(0.00112483 0.00193254)",
-    displayWidth: 891,
-    displayHeight: 436,
-  },
-  {
-    ...PresidentBush,
-    id: "president_bush",
-    alt: "President Bush, Oval Office, White House",
-    transform: "translate(-0.578018 -0.0927808) scale(0.00342559 0.0024443)",
-    displayWidth: 548,
-    displayHeight: 708,
-  },
-  {
-    ...SittingWithMadam,
-    id: "sitting_with_madam",
-    alt: "Sitting with Madam",
-    transform: "translate(0 -0.123213) scale(0.00165563 0.00304428)",
-    displayWidth: 891,
-    displayHeight: 436,
-  },
-  {
-    ...PresidentMandela,
-    id: "president_mandela",
-    alt: "President Nelson Mandela, White House Visit",
-    transform:
-      "matrix(-8.72383e-06 -0.00218254 0.00155761 -9.17306e-06 -0.30674 1.66987)",
-    displayWidth: 548,
-    displayHeight: 463,
-  },
-];
-
 export function Gallery() {
   return (
     <Stack
@@ -121,7 +59,6 @@ export function Gallery() {
             blurDataURL={OvalOffice.blurDataURL}
             src={OvalOffice.src}
             alt="the oval office"
-            data-aos="fade-up"
             fill
             style={{
               objectFit: "cover",
@@ -174,7 +111,6 @@ export function Gallery() {
               className="rounded-3xl !relative"
               blurDataURL={CorporateCouncil.blurDataURL}
               src={CorporateCouncil.src}
-              data-aos="fade-up"
               fill
               alt="presiden samia suhulu hassan"
               style={{
@@ -216,7 +152,6 @@ export function Gallery() {
               className="rounded-3xl !relative"
               blurDataURL={PresidentBush.blurDataURL}
               src={PresidentBush.src}
-              data-aos="fade-up"
               fill
               alt="president george w. bush"
               style={{
@@ -261,7 +196,6 @@ export function Gallery() {
               className="rounded-3xl !relative"
               src={HandShakeMeeting.src}
               blurDataURL={HandShakeMeeting.blurDataURL}
-              data-aos="fade-up"
               fill
               alt="president paul kagame"
               style={{
@@ -303,7 +237,6 @@ export function Gallery() {
               className="rounded-3xl !relative"
               src={SouthSudanPresident.src}
               blurDataURL={SouthSudanPresident.blurDataURL}
-              data-aos="fade-up"
               fill
               alt="president salva kiir"
               style={{
@@ -355,9 +288,8 @@ export function Gallery() {
             className="rounded-3xl !relative"
             blurDataURL={SittingWithMadam.blurDataURL}
             src={SittingWithMadam.src}
-            data-aos="fade-up"
             fill
-            alt="presiden ellen johnson-sirleaf"
+            alt="president ellen johnson-sirleaf"
             style={{
               objectFit: "cover",
               objectPosition: "left top",
@@ -399,7 +331,6 @@ export function Gallery() {
             src={PresidentMandela.src}
             className="rounded-3xl !relative"
             blurDataURL={PresidentMandela.blurDataURL}
-            data-aos="fade-up"
             fill
             style={{
               objectFit: "cover",

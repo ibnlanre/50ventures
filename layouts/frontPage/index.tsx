@@ -156,6 +156,8 @@ export function FrontPage() {
           <div className="relative p-5 pb-0">
             <div className="h-0 pb-[120%] relative">
               <Image
+                placeholder="blur"
+                blurDataURL={Skyscraper.blurDataURL}
                 alt="skyscraper"
                 src={Skyscraper.src}
                 className="rounded-t-full"
