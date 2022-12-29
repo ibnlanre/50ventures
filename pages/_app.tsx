@@ -6,6 +6,7 @@ import aos from "aos";
 
 import { MantineProvider } from "@mantine/styles";
 import { useEffect } from "react";
+import { Meta } from "@/layouts";
 
 function App({ Component, pageProps }) {
   useEffect(() => {
@@ -38,6 +39,7 @@ function App({ Component, pageProps }) {
         headings: { fontFamily: "Montserrat, sans-serif" },
       }}
     >
+      <Meta />
       <Component {...pageProps} />
     </MantineProvider>
   );

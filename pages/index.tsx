@@ -1,14 +1,8 @@
-import { Meta, NavBar, FrontPage, Footer } from "@/layouts";
+import { Meta, NavBar, FrontPage, Organization, Footer } from "@/layouts";
 import { Fragment } from "react";
 
 import dynamic from "next/dynamic";
 
-const Organization = dynamic(
-  () => import("@/layouts").then((value) => value.Organization),
-  {
-    ssr: false,
-  }
-);
 const Leadership = dynamic(
   () => import("@/layouts").then((value) => value.Leadership),
   {
@@ -31,7 +25,6 @@ const Gallery = dynamic(
 function Home() {
   return (
     <Fragment>
-      <Meta />
       <NavBar />
       <FrontPage />
       <Organization />

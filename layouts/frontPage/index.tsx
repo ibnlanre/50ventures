@@ -53,26 +53,12 @@ const images: Array<{
 ];
 
 export function FrontPage() {
-  const [skyscraper, setSkysraper] = useState<
-    Partial<{
-      content: ArrayBuffer;
-      metadata: {
-        originalWidth: number;
-        originalHeight: number;
-        width: number;
-        height: number;
-        type: string;
-        dataURIBase64: string;
-      };
-    }>
-  >({});
-
   return (
     <Stack
       id="home"
       className={clsx(
         "max-w-screen-xl mx-auto",
-        "clump:pt-[clamp(2rem,7vw,7rem)] pt-28",
+        "clump:pt-[clamp(6rem,15vw,12rem)] pt-48",
         "clump:px-[clamp(5px,5vw,5rem)] px-20"
       )}
     >
