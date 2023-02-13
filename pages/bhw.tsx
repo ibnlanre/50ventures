@@ -1,6 +1,7 @@
-import { Footer, BHW, NavBar } from "@/layouts";
-import Head from "next/head";
+import { Footer, BHW } from "@/layouts";
 import { Fragment } from "react";
+
+import Head from "next/head";
 
 export default function () {
   return (
@@ -9,7 +10,6 @@ export default function () {
         <title>50Ventures | BHW</title>
         <meta name="description" content="" />
       </Head>
-      <NavBar />
       <BHW />
       <Footer />
     </Fragment>

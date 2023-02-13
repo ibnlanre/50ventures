@@ -45,9 +45,6 @@ export function NavBar() {
               }}
             >
               <Button
-                data-aos="fade-left"
-                data-aos-delay={idx * 100}
-                data-aos-once
                 className={clsx(
                   "bg-transparent px-0",
                   hash.match(id) ? "text-accent-70" : "text-accent-50"
@@ -61,14 +58,7 @@ export function NavBar() {
         </Group>
 
         <Link href="/contact-us">
-          <Button
-            data-aos="fade-left"
-            data-aos-delay={navItems.length * 100}
-            data-aos-once
-            className="text-white stripe"
-          >
-            Contact Us
-          </Button>
+          <Button className="text-white stripe">Contact Us</Button>
         </Link>
       </Group>
     </Group>

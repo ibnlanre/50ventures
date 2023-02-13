@@ -2,6 +2,8 @@ export * from "./navBar";
 export * from "./frontPage";
 export * from "./organization";
 export * from "./leadership";
+export * from "./favicon";
+export * from "./fonts";
 export * from "./projects";
 export * from "./awards";
 export * from "./gallery";
