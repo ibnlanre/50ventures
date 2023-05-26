@@ -77,8 +77,9 @@ export function Gallery() {
           >
             <Text
               className={clsx(
-                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
-                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] sm:clump:text-[clamp(14px,2vw,20px)]",
+                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]",
+                "clump:text-[clamp(16px,2vw,20px)]"
               )}
             >
               Dr. Jendayi E. Frazer, and President George W. Bush, Former U.S
@@ -130,8 +131,9 @@ export function Gallery() {
             >
               <Text
                 className={clsx(
-                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
-                  "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] sm:clump:text-[clamp(14px,2vw,20px)]",
+                  "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]",
+                  "clump:text-[clamp(16px,2vw,20px)]"
                 )}
               >
                 Dr. Jendayi E. Frazer, and President George W. Bush, at the Oval
@@ -139,9 +141,10 @@ export function Gallery() {
               </Text>
             </div>
           </div>
+
           <div
             className={clsx(
-              "group relative rounded-3xl overflow-hidden",
+              "group relative rounded-3xl overflow-hidden xl:min-w-[24vw]",
               css({
                 filter: "grayscale(1)",
                 "&:hover": {
@@ -153,13 +156,13 @@ export function Gallery() {
             <Image
               placeholder="blur"
               className="rounded-3xl !relative"
-              blurDataURL={SecretaryCondolezzaRice.blurDataURL}
-              src={SecretaryCondolezzaRice.src}
+              blurDataURL={SittingWithMadam.blurDataURL}
+              src={SittingWithMadam.src}
               fill
-              alt=""
+              alt="president ellen johnson-sirleaf"
               style={{
                 objectFit: "cover",
-                objectPosition: "0 5%",
+                objectPosition: "left top",
               }}
             />
             <div
@@ -171,13 +174,13 @@ export function Gallery() {
             >
               <Text
                 className={clsx(
-                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
-                  "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] sm:clump:text-[clamp(14px,2vw,20px)]",
+                  "text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-[7%]",
+                  "clump:text-[clamp(16px,2vw,20px)]"
                 )}
               >
-                Ambassador Jendayi E. Frazer with Secretary Condoleezza Rice
-                receiving the Secretary's Distinguished Service Medal, the
-                highest award bestowed by the Secretary of State (January 2009)
+                Dr. Jendayi E. Frazer, and President Ellen Johnson-Sirleaf of
+                Liberia meeting in Monrovia.
               </Text>
             </div>
           </div>
@@ -216,15 +219,17 @@ export function Gallery() {
             >
               <Text
                 className={clsx(
-                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
-                  "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] sm:clump:text-[clamp(14px,2vw,20px)]",
+                  "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]",
+                  "clump:text-[clamp(16px,2vw,20px)]"
                 )}
               >
                 Dr. Jendayi E. Frazer, and President Paul Kagame of Rwanda at
-                the Munich Security Conference (March, 2022)
+                the Munich Security Conference (March, 2022).
               </Text>
             </div>
           </div>
+
           <div
             className={clsx(
               "group relative rounded-3xl overflow-hidden",
@@ -239,13 +244,13 @@ export function Gallery() {
             <Image
               placeholder="blur"
               className="rounded-3xl !relative"
-              src={UNGeneralEmbassy.src}
-              blurDataURL={UNGeneralEmbassy.blurDataURL}
+              blurDataURL={SecretaryCondolezzaRice.blurDataURL}
+              src={SecretaryCondolezzaRice.src}
               fill
-              alt="secretary"
+              alt=""
               style={{
                 objectFit: "cover",
-                objectPosition: "center",
+                objectPosition: "0 5%",
               }}
             />
             <div
@@ -257,15 +262,14 @@ export function Gallery() {
             >
               <Text
                 className={clsx(
-                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
-                  "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] sm:clump:text-[clamp(14px,2vw,20px)]",
+                  "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]",
+                  "clump:text-[clamp(16px,2vw,20px)]"
                 )}
               >
-                Dr. Jendayi E. Frazer, at the USUN Embassy during the UN General
-                Assembly with President George W. Bush, Secretary of State Colin
-                Powell, National Security Advisor Condoleezza Rice, Chief of
-                Staff Andy Card, USUN Ambassador John Negroponte, and US
-                Ambassador to Uganda Martin Brennan.
+                Ambassador Jendayi E. Frazer with Secretary Condoleezza Rice
+                receiving the Secretary's Distinguished Service Medal, the
+                highest award bestowed by the Secretary of State (January 2009).
               </Text>
             </div>
           </div>
@@ -275,13 +279,13 @@ export function Gallery() {
       <section
         className={clsx(
           "lg:grid-cols-none lg:auto-cols-[1fr_auto] md:grid-flow-col",
-          "clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10 max-h-[400px]",
+          "clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10 md:max-h-[400px]",
           "grid items-center sm:grid-cols-2"
         )}
       >
         <div
           className={clsx(
-            "h-full group relative rounded-3xl overflow-hidden xl:min-w-[24vw]",
+            "h-full group relative rounded-3xl overflow-hidden",
             css({
               filter: "grayscale(1)",
               "&:hover": {
@@ -293,13 +297,13 @@ export function Gallery() {
           <Image
             placeholder="blur"
             className="rounded-3xl !relative"
-            blurDataURL={SittingWithMadam.blurDataURL}
-            src={SittingWithMadam.src}
+            src={UNGeneralEmbassy.src}
+            blurDataURL={UNGeneralEmbassy.blurDataURL}
             fill
-            alt="president ellen johnson-sirleaf"
+            alt="secretary"
             style={{
               objectFit: "cover",
-              objectPosition: "left top",
+              objectPosition: "top right",
             }}
           />
           <div
@@ -311,19 +315,23 @@ export function Gallery() {
           >
             <Text
               className={clsx(
-                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
-                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] sm:clump:text-[clamp(14px,2vw,20px)]",
+                "text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-[7%]",
+                "clump:text-[clamp(16px,2vw,20px)]"
               )}
             >
-              Dr. Jendayi E. Frazer, and President Ellen Johnson-Sirleaf of
-              Liberia meeting in Monrovia.
+              Dr. Jendayi E. Frazer, at the USUN Embassy during the UN General
+              Assembly with President George W. Bush, Secretary of State Colin
+              Powell, National Security Advisor Condoleezza Rice, Chief of Staff
+              Andy Card, USUN Ambassador John Negroponte, and US Ambassador to
+              Uganda Martin Brennan.
             </Text>
           </div>
         </div>
 
         <div
           className={clsx(
-            "lg:max-w-[35vw] h-full group relative rounded-3xl overflow-hidden",
+            "lg:max-w-[35vw] min-[1440px]:max-w-[25vw] h-full group relative rounded-3xl overflow-hidden",
             css({
               filter: "grayscale(1)",
               "&:hover": {
@@ -353,8 +361,9 @@ export function Gallery() {
           >
             <Text
               className={clsx(
-                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
-                "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
+                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] sm:clump:text-[clamp(14px,2vw,20px)]",
+                "text-white leading-[42px] font-medium text-xl w-10/12 mx-auto mb-[7%]",
+                "clump:text-[clamp(16px,2vw,20px)]"
               )}
             >
               Dr. Jendayi E. Frazer, and Nelson Mandela of South Africa in DC.

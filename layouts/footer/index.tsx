@@ -89,8 +89,19 @@ export function Footer() {
           <Stack>
             <ul className="pl-0 list-none">
               <li>3213 Duke St. #624 Alexandria, VA 22314</li>
-              <li>(270) 555-0117</li>
-              <li>info@50ventures.com</li>
+              <li>
+                <a className="text-white no-underline" href="tel:(270)555-0117">
+                  (270) 555-0117
+                </a>
+              </li>
+              <li>
+                <a
+                  className="text-white no-underline"
+                  href="mailto:info@50ventures.com"
+                >
+                  info@50ventures.com
+                </a>
+              </li>
             </ul>
           </Stack>
           <Group>
@@ -105,21 +116,55 @@ export function Footer() {
           </Title>
 
           <Stack className="w-[260px]" spacing="xs">
-            <a className="text-white no-underline" href="#home">
+            <Link
+              className="text-white no-underline"
+              href={{
+                pathname: "/",
+                hash: "home",
+              }}
+            >
               Home
-            </a>
-            <a className="text-white no-underline" href="#leadership">
+            </Link>
+
+            <Link
+              className="text-white no-underline"
+              href={{
+                pathname: "/",
+                hash: "leadership",
+              }}
+            >
               Leadership
-            </a>
-            <a className="text-white no-underline" href="#about">
+            </Link>
+
+            <Link
+              className="text-white no-underline"
+              href={{
+                pathname: "/",
+                hash: "about",
+              }}
+            >
               About
-            </a>
-            <a className="text-white no-underline" href="#projects">
-              Projects
-            </a>
-            <a className="text-white no-underline" href="#partners">
+            </Link>
+
+            <Link
+              className="text-white no-underline"
+              href={{
+                pathname: "/",
+                hash: "awards",
+              }}
+            >
+              Awards
+            </Link>
+
+            <Link
+              className="text-white no-underline"
+              href={{
+                pathname: "/",
+                hash: "partners",
+              }}
+            >
               Partners
-            </a>
+            </Link>
           </Stack>
         </Stack>
       </Group>
