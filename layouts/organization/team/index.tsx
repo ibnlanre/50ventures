@@ -97,9 +97,7 @@ export function Team() {
           working to deliver results for businesses and projects that matter.
         </Spoiler>
 
-        <article
-          className="flex flex-wrap justify-center gap-10"
-        >
+        <article className="flex flex-wrap justify-center gap-10">
           {images.map(
             (
               {
@@ -115,6 +113,7 @@ export function Team() {
             ) => {
               return (
                 <section
+                  key={idx}
                   data-aos="zoom-in"
                   data-aos-delay={idx * 200}
                   className="relative flex-1 mx-auto lg:mx-0 sm:max-w-[45%] lg:max-w-[5%] min-w-[min(100%,330px)]"

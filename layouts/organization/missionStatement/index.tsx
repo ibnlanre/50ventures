@@ -1,7 +1,7 @@
 import { clsx, Spoiler, Stack, Title } from "@mantine/core";
 import Image from "next/image";
 
-import WomanWithGlasses from "./assets/woman-with-glasses.jpeg";
+import JobSite from "./assets/job-site.jpeg";
 
 export function MissionStatement() {
   return (
@@ -26,13 +26,13 @@ export function MissionStatement() {
 
         <div className="relative h-0 pb-[100%] m-4">
           <Image
-            alt="woman with glasses"
-            src={WomanWithGlasses.src}
+            alt="Dr. Jendayi Frazer at the Job Site"
+            src={JobSite.src}
             placeholder="blur"
-            blurDataURL={WomanWithGlasses.blurDataURL}
+            blurDataURL={JobSite.blurDataURL}
             fill
             style={{
-              objectPosition: "40% 35%",
+              objectPosition: "top right",
             }}
             className="object-cover rounded-t-full"
           />

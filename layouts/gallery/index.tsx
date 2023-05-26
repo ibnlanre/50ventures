@@ -1,11 +1,10 @@
 import OvalOffice from "./assets/oval_office_white_house_briefing.png";
-import CorporateCouncil from "./assets/corporate_council_on_africa.jpeg";
+import SecretaryCondolezzaRice from "./assets/secretary_condoleezza_rice.jpeg";
 import HandShakeMeeting from "./assets/hand_shake_meeting.jpeg";
 import PresidentBush from "./assets/president_bush.png";
-import SouthSudanPresident from "./assets/south_sudan_president.jpg";
+import UNGeneralEmbassy from "./assets/un_general_embassy.jpeg";
 import SittingWithMadam from "./assets/sitted_with_madam.jpeg";
 import PresidentMandela from "./assets/president_mandela.png";
-import CarnegieMellon from "./assets/carnegie_mellon_university.jpg";
 
 import Image from "next/image";
 
@@ -78,7 +77,7 @@ export function Gallery() {
           >
             <Text
               className={clsx(
-                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
                 "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
               )}
             >
@@ -131,7 +130,7 @@ export function Gallery() {
             >
               <Text
                 className={clsx(
-                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
                   "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
                 )}
               >
@@ -154,10 +153,10 @@ export function Gallery() {
             <Image
               placeholder="blur"
               className="rounded-3xl !relative"
-              blurDataURL={CorporateCouncil.blurDataURL}
-              src={CorporateCouncil.src}
+              blurDataURL={SecretaryCondolezzaRice.blurDataURL}
+              src={SecretaryCondolezzaRice.src}
               fill
-              alt="presiden samia suhulu hassan"
+              alt=""
               style={{
                 objectFit: "cover",
                 objectPosition: "0 5%",
@@ -172,12 +171,13 @@ export function Gallery() {
             >
               <Text
                 className={clsx(
-                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
                   "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
                 )}
               >
-                Dr. Jendayi E. Frazer, and President Samia Suhulu Hassan of
-                Tanzania in DC 2022.
+                Ambassador Jendayi E. Frazer with Secretary Condoleezza Rice
+                receiving the Secretary's Distinguished Service Medal, the
+                highest award bestowed by the Secretary of State (January 2009)
               </Text>
             </div>
           </div>
@@ -216,7 +216,7 @@ export function Gallery() {
             >
               <Text
                 className={clsx(
-                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
                   "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
                 )}
               >
@@ -239,10 +239,10 @@ export function Gallery() {
             <Image
               placeholder="blur"
               className="rounded-3xl !relative"
-              src={SouthSudanPresident.src}
-              blurDataURL={SouthSudanPresident.blurDataURL}
+              src={UNGeneralEmbassy.src}
+              blurDataURL={UNGeneralEmbassy.blurDataURL}
               fill
-              alt="president salva kiir"
+              alt="secretary"
               style={{
                 objectFit: "cover",
                 objectPosition: "center",
@@ -257,12 +257,15 @@ export function Gallery() {
             >
               <Text
                 className={clsx(
-                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                  "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
                   "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
                 )}
               >
-                Dr. Jendayi E. Frazer, with President Salva Kiir Mayardit of
-                Sudan at State House, Juba, South Sudan .
+                Dr. Jendayi E. Frazer, at the USUN Embassy during the UN General
+                Assembly with President George W. Bush, Secretary of State Colin
+                Powell, National Security Advisor Condoleezza Rice, Chief of
+                Staff Andy Card, USUN Ambassador John Negroponte, and US
+                Ambassador to Uganda Martin Brennan.
               </Text>
             </div>
           </div>
@@ -272,7 +275,7 @@ export function Gallery() {
       <section
         className={clsx(
           "lg:grid-cols-none lg:auto-cols-[1fr_auto] md:grid-flow-col",
-          "clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10",
+          "clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10 max-h-[400px]",
           "grid items-center sm:grid-cols-2"
         )}
       >
@@ -308,7 +311,7 @@ export function Gallery() {
           >
             <Text
               className={clsx(
-                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
                 "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
               )}
             >
@@ -350,7 +353,7 @@ export function Gallery() {
           >
             <Text
               className={clsx(
-                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(16px,2vw,20px)]",
+                "clump:leading-[clamp(1.3rem,2.5vw,2.5rem)] clump:text-[clamp(14px,1.5vw,20px)]",
                 "text-white leading-[42px] font-medium  text-xl w-10/12 mx-auto mb-[7%]"
               )}
             >
