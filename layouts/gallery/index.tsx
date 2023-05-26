@@ -82,10 +82,10 @@ export function Gallery() {
                 "clump:text-[clamp(16px,2vw,20px)]"
               )}
             >
-              Dr. Jendayi E. Frazer, and President George W. Bush, Former U.S
-              Secretary of State Colin Powell, Vice President Richard Bruce
-              Cheney, and US Trade Representative Robert B. Zoellick, Oval
-              Office, White House Briefing.
+              Dr. Jendayi E. Frazer, and President George W. Bush, US Secretary
+              of State Colin Powell, Vice President Richard Bruce Cheney, and US
+              Trade Representative Robert B. Zoellick, Oval Office, White House
+              Briefing.
             </Text>
           </div>
         </div>
