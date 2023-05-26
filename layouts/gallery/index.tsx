@@ -25,15 +25,19 @@ export function Gallery() {
     >
       <section
         className={clsx(
-          "grid items-center auto-cols-[1fr_auto] lg:grid-flow-col",
-          "clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10"
+          "grid items-center clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10",
+          "auto-cols-[1fr_auto] lg:grid-flow-col"
         )}
       >
-        <Stack className="gap-12 2xl:w-[420px]">
+        <Stack className="gap-12 min-[2235px]:min-w-[420px] xl:min-w-[24vw]">
           <Title className="text-3xl font-clash" order={2} weight={700}>
             GALLERY
           </Title>
-          <Text data-aos="zoom-in" color="accent.4" className="leading-[40px] text-lg">
+          <Text
+            data-aos="zoom-in"
+            color="accent.4"
+            className="leading-[40px] text-lg"
+          >
             These images speak a thousand words on our impact and drive. We
             believe in delivering transformation through strategic initiatives
             that deploy innovative ideas alongside deep networks of valuable
@@ -44,7 +48,7 @@ export function Gallery() {
 
         <div
           className={clsx(
-            "group relative rounded-3xl overflow-hidden lg:min-w-[15vw] self-end",
+            "group relative rounded-3xl overflow-hidden lg:min-w-[45vw] xl:min-w-[15vw] self-end",
             css({
               filter: "grayscale(1)",
               "&:hover": {
@@ -89,9 +93,9 @@ export function Gallery() {
 
       <section
         className={clsx(
-          "lg:grid-cols-none lg:auto-cols-[auto_1fr] md:grid-flow-col",
+          "lg:auto-cols-[auto_1fr] md:grid-flow-col",
           "clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10",
-          "grid items-center sm:grid-cols-2"
+          "grid items-center sm:grid-cols-2 lg:grid-cols-none"
         )}
       >
         <Stack className="clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10 h-full lg:max-w-[35vw] 2xl:max-w-[24vw]">
@@ -179,7 +183,7 @@ export function Gallery() {
           </div>
         </Stack>
 
-        <Stack className="h-full clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10 max-[1560px]:w-[450px]">
+        <Stack className="h-full clump:gap-[clamp(1rem,5vw,2.5rem)] gap-10 min-[2360px]:min-w-[450px]">
           <div
             className={clsx(
               "flex-1 h-full group relative rounded-3xl overflow-hidden",

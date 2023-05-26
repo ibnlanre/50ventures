@@ -2,6 +2,7 @@ import { clsx, Spoiler, Stack, Text, Title } from "@mantine/core";
 import Image from "next/image";
 
 import HijabLady from "./assets/hijab-lady.png";
+import SecretaryCondolezzaRice from "./assets/secretary-condoleezza-rice.jpeg";
 
 export function About() {
   return (
@@ -25,10 +26,10 @@ export function About() {
 
         <div className="relative h-0 pb-[100%] m-4">
           <Image
-            alt="hijab lady"
-            src={HijabLady.src}
+            alt="Ambassador Jendayi E. Frazer with Secretary Condoleezza Rice receiving the Secretary's Distinguished Service Medal, the highest award bestowed by the Secretary of State (January 2009)"
+            src={SecretaryCondolezzaRice.src}
             placeholder="blur"
-            blurDataURL={HijabLady.blurDataURL}
+            blurDataURL={SecretaryCondolezzaRice.blurDataURL}
             fill
             style={{
               objectPosition: "20% 80%",
