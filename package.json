@@ -1,0 +1,49 @@
+{
+  "name": "50ventures",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ibnlanre/50ventures.git",
+  "author": "olaitanlanre28@gmail.com",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "next:dev": "next dev",
+    "next:build": "next build",
+    "next:start": "next start",
+    "next:lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/css": "^11.10.0",
+    "@emotion/react": "^11.10.4",
+    "@mantine/core": "^5.5.4",
+    "@mantine/dates": "^5.5.4",
+    "@mantine/form": "^5.5.4",
+    "@mantine/hooks": "^5.5.4",
+    "aos": "^2.3.4",
+    "autoprefixer": "^10.4.12",
+    "clsx": "^1.1.1",
+    "iconsax-react": "^0.0.8",
+    "next": "^13.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-lazy-load-image-component": "^1.5.5",
+    "sharp": "^0.31.3",
+    "tailwindcss": "^3.1.8",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "eslint": "^8.12.0",
+    "eslint-config-next": "^12.1.2",
+    "postcss": "^8.4.17",
+    "postcss-nesting": "^11.2.2",
+    "typescript": "^4.5.5"
+  },
+  "browserslist": [
+    ">0.3%",
+    "not dead",
+    "not op_mini all"
+  ]
+}
