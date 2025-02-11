@@ -156,10 +156,10 @@ export function FrontPage() {
 
       <Group
         align="start"
-        className="flex-col pt-16 clump:pt-[clamp(1rem,4vw,4rem)] sm:flex-row overflow-hidden"
+        className="flex-col pt-16 clump:pt-[clamp(1rem,4vw,4rem)] sm:flex-row overflow-hidden items-center"
       >
         <Text color="accent.4" className="max-w-[18rem] font-semibold">
-          Trusted by companies worldwide:
+          Trusted by companies worldwide
         </Text>
 
         <div
